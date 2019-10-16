@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B503586823565E8A00A7C51A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503586723565E8A00A7C51A /* AppDelegate.swift */; };
-		B503586A23565E8A00A7C51A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503586923565E8A00A7C51A /* SceneDelegate.swift */; };
 		B503586C23565E8A00A7C51A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503586B23565E8A00A7C51A /* ViewController.swift */; };
 		B503586F23565E8A00A7C51A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B503586D23565E8A00A7C51A /* Main.storyboard */; };
 		B503587223565E8A00A7C51A /* PostAppsClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B503587023565E8A00A7C51A /* PostAppsClient.xcdatamodeld */; };
@@ -16,14 +15,12 @@
 		B503587723565E8D00A7C51A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B503587523565E8D00A7C51A /* LaunchScreen.storyboard */; };
 		B503588223565E8D00A7C51A /* PostAppsClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503588123565E8D00A7C51A /* PostAppsClientTests.swift */; };
 		B503588D23565E8D00A7C51A /* PostAppsClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503588C23565E8D00A7C51A /* PostAppsClientUITests.swift */; };
-		B503589C23565EBF00A7C51A /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B503589B23565EBF00A7C51A /* Networking.framework */; };
-		B503589D23565EBF00A7C51A /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B503589B23565EBF00A7C51A /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B50358A023565EC300A7C51A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B503589F23565EC300A7C51A /* Core.framework */; };
-		B50358A123565EC300A7C51A /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B503589F23565EC300A7C51A /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B50358A32356683F00A7C51A /* InfoDebug.plist in Resources */ = {isa = PBXBuildFile; fileRef = B50358A22356683F00A7C51A /* InfoDebug.plist */; };
 		B50358A52356698900A7C51A /* HTTPDebugExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50358A42356698900A7C51A /* HTTPDebugExecutor.swift */; };
 		B593D5652356857800B4D87E /* Adapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B593D5642356857800B4D87E /* Adapter.framework */; };
 		B593D5662356857800B4D87E /* Adapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B593D5642356857800B4D87E /* Adapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B593D5D523579EF000B4D87E /* PostFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B593D5D423579EF000B4D87E /* PostFeature.framework */; };
+		B593D5D623579EF000B4D87E /* PostFeature.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B593D5D423579EF000B4D87E /* PostFeature.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B593D5E92357A4D100B4D87E /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D5E82357A4D100B4D87E /* NavigationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +47,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B503589D23565EBF00A7C51A /* Networking.framework in Embed Frameworks */,
 				B593D5662356857800B4D87E /* Adapter.framework in Embed Frameworks */,
-				B50358A123565EC300A7C51A /* Core.framework in Embed Frameworks */,
+				B593D5D623579EF000B4D87E /* PostFeature.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,7 +58,6 @@
 /* Begin PBXFileReference section */
 		B503586423565E8A00A7C51A /* PostAppsClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostAppsClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B503586723565E8A00A7C51A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B503586923565E8A00A7C51A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B503586B23565E8A00A7C51A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B503586E23565E8A00A7C51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B503587123565E8A00A7C51A /* PostAppsClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PostAppsClient.xcdatamodel; sourceTree = "<group>"; };
@@ -80,6 +75,8 @@
 		B50358A22356683F00A7C51A /* InfoDebug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfoDebug.plist; sourceTree = "<group>"; };
 		B50358A42356698900A7C51A /* HTTPDebugExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDebugExecutor.swift; sourceTree = "<group>"; };
 		B593D5642356857800B4D87E /* Adapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Adapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B593D5D423579EF000B4D87E /* PostFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PostFeature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B593D5E82357A4D100B4D87E /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,9 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B503589C23565EBF00A7C51A /* Networking.framework in Frameworks */,
 				B593D5652356857800B4D87E /* Adapter.framework in Frameworks */,
-				B50358A023565EC300A7C51A /* Core.framework in Frameworks */,
+				B593D5D523579EF000B4D87E /* PostFeature.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				B503586723565E8A00A7C51A /* AppDelegate.swift */,
-				B503586923565E8A00A7C51A /* SceneDelegate.swift */,
 				B503586B23565E8A00A7C51A /* ViewController.swift */,
 				B503586D23565E8A00A7C51A /* Main.storyboard */,
 				B503587323565E8D00A7C51A /* Assets.xcassets */,
@@ -144,6 +139,7 @@
 				B50358A22356683F00A7C51A /* InfoDebug.plist */,
 				B503587023565E8A00A7C51A /* PostAppsClient.xcdatamodeld */,
 				B50358A42356698900A7C51A /* HTTPDebugExecutor.swift */,
+				B593D5E82357A4D100B4D87E /* NavigationManager.swift */,
 			);
 			path = PostAppsClient;
 			sourceTree = "<group>";
@@ -169,6 +165,7 @@
 		B503589A23565EBF00A7C51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B593D5D423579EF000B4D87E /* PostFeature.framework */,
 				B593D5642356857800B4D87E /* Adapter.framework */,
 				B503589F23565EC300A7C51A /* Core.framework */,
 				B503589B23565EBF00A7C51A /* Networking.framework */,
@@ -281,7 +278,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B50358A32356683F00A7C51A /* InfoDebug.plist in Resources */,
 				B503587723565E8D00A7C51A /* LaunchScreen.storyboard in Resources */,
 				B503587423565E8D00A7C51A /* Assets.xcassets in Resources */,
 				B503586F23565E8A00A7C51A /* Main.storyboard in Resources */,
@@ -313,7 +309,7 @@
 				B503586C23565E8A00A7C51A /* ViewController.swift in Sources */,
 				B50358A52356698900A7C51A /* HTTPDebugExecutor.swift in Sources */,
 				B503586823565E8A00A7C51A /* AppDelegate.swift in Sources */,
-				B503586A23565E8A00A7C51A /* SceneDelegate.swift in Sources */,
+				B593D5E92357A4D100B4D87E /* NavigationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -472,7 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -489,6 +485,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MS48YPHB8N;
 				INFOPLIST_FILE = PostAppsClient/InfoDebug.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -507,6 +504,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MS48YPHB8N;
 				INFOPLIST_FILE = PostAppsClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

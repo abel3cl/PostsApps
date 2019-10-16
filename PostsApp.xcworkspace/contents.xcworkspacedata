@@ -5,6 +5,9 @@
       location = "group:PostAppsClient/PostAppsClient.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:/Users/Abel/PostsApps/PostFeature/PostFeatureApp.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Adapter/Adapter.xcodeproj">
    </FileRef>
    <FileRef

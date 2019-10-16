@@ -13,12 +13,11 @@ public struct PostAdapterImpl: PostAdapter {
     
     public func getPosts(completion: @escaping (Result<[Post], Error>) -> Void) {
 
-        let request = HTTPRequest.get(url: "http://jsonplaceholder.typicode.com/posts")
+        let request = HTTPRequest.get(url: "https://jsonplaceholder.typicode.com/posts")
 
         HTTPCommand(request: request,
-                    map: { (response: PostsResponse) in
-                        return response.posts.map(Post.init)
-        })
+                    decode: [PostResponse].self,
+                    map: { return $0.map(Post.init) })
         .perform(in: client,
                  dispatcher: AsyncDispatcher(),
                  completion: completion)

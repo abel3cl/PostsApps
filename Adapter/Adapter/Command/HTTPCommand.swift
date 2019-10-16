@@ -5,6 +5,7 @@ enum JSONError: Error {
 }
 struct HTTPCommand<Decode, Map> where Decode: Decodable {
     let request: HTTPRequest
+    let decode: Decode.Type
     let map: (Decode) -> Map
 
     func perform(in client: HTTPClient,
