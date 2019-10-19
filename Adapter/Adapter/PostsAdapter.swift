@@ -1,36 +1,16 @@
-import Core
+import Foundation
 import Networking
 
-public protocol PostAdapter {
-    func getPosts(completion: @escaping (Result<[Post], Error>) -> Void)
-}
-public struct PostAdapterImpl: PostAdapter {
-    let client: HTTPClient
+public struct PostAdapter {
+    public var post: PostAdapterList
+    public var user: PostAdapterUser
+    public var comment: PostAdapterComment
 
     public init(client: HTTPClient) {
-        self.client = client
-    }
-    
-    public func getPosts(completion: @escaping (Result<[Post], Error>) -> Void) {
-
-        let request = HTTPRequest.get(url: "https://jsonplaceholder.typicode.com/posts")
-
-        HTTPCommand(request: request,
-                    decode: [PostResponse].self,
-                    map: { return $0.map(Post.init) })
-        .perform(in: client,
-                 dispatcher: AsyncDispatcher(),
-                 completion: completion)
+        post = PostAdapterListImpl(client: client)
+        user = PostAdapterUserImpl(client: client)
+        comment = PostAdapterCommentImpl(client: client)
     }
 }
 
-extension Post {
-    init(withResponse response: PostResponse) {
-        self.init(userId: response.userId,
-                  id: response.id,
-                  title: response.title,
-                  body: response.body,
-                  comments: [])
 
-    }
-}

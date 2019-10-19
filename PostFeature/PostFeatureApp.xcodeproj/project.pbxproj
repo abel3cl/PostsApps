@@ -27,9 +27,15 @@
 		B593D5EC2357A5F400B4D87E /* PostsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D5EA2357A5F400B4D87E /* PostsListViewController.swift */; };
 		B593D5ED2357A5F400B4D87E /* PostsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B593D5EB2357A5F400B4D87E /* PostsListViewController.xib */; };
 		B593D5EF2357A75C00B4D87E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B593D5EE2357A75C00B4D87E /* Default-568h@2x.png */; };
-		B593D5F12357A89D00B4D87E /* PostsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D5F02357A89D00B4D87E /* PostsAdapter.swift */; };
 		B593D5F32357AC5A00B4D87E /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D5F22357AC5A00B4D87E /* PostTableViewCell.swift */; };
 		B593D5F82357B13600B4D87E /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D5F72357B13600B4D87E /* PostManager.swift */; };
+		B593D5FD235B41CF00B4D87E /* PostLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D5FC235B41CF00B4D87E /* PostLocalizer.swift */; };
+		B593D601235B4ECE00B4D87E /* LocalizablePostScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = B593D603235B4ECE00B4D87E /* LocalizablePostScreen.strings */; };
+		B593D60B235B523400B4D87E /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D60A235B523400B4D87E /* DetailsPresenter.swift */; };
+		B593D60E235B524100B4D87E /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D60C235B524100B4D87E /* DetailsViewController.swift */; };
+		B593D60F235B524100B4D87E /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B593D60D235B524100B4D87E /* DetailsViewController.xib */; };
+		B593D611235B524E00B4D87E /* DetailsLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D610235B524E00B4D87E /* DetailsLocalizer.swift */; };
+		B593D617235B54D400B4D87E /* LocalizableDetailsScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = B593D616235B545B00B4D87E /* LocalizableDetailsScreen.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,9 +130,15 @@
 		B593D5EA2357A5F400B4D87E /* PostsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListViewController.swift; sourceTree = "<group>"; };
 		B593D5EB2357A5F400B4D87E /* PostsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsListViewController.xib; sourceTree = "<group>"; };
 		B593D5EE2357A75C00B4D87E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		B593D5F02357A89D00B4D87E /* PostsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsAdapter.swift; sourceTree = "<group>"; };
 		B593D5F22357AC5A00B4D87E /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		B593D5F72357B13600B4D87E /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
+		B593D5FC235B41CF00B4D87E /* PostLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLocalizer.swift; sourceTree = "<group>"; };
+		B593D602235B4ECE00B4D87E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizablePostScreen.strings; sourceTree = "<group>"; };
+		B593D60A235B523400B4D87E /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		B593D60C235B524100B4D87E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		B593D60D235B524100B4D87E /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		B593D610235B524E00B4D87E /* DetailsLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsLocalizer.swift; sourceTree = "<group>"; };
+		B593D615235B545B00B4D87E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableDetailsScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,16 +215,9 @@
 			children = (
 				B593D57323579D2000B4D87E /* AppDelegate.swift */,
 				B593D57C23579D2100B4D87E /* Assets.xcassets */,
+				B593D5FE235B4E2400B4D87E /* SupportingFiles */,
 				B593D57E23579D2100B4D87E /* LaunchScreen.storyboard */,
-				B593D58123579D2100B4D87E /* Info.plist */,
-				B593D5B023579E2800B4D87E /* PostCoordinator.swift */,
-				B593D5E12357A05800B4D87E /* PostPresenterFactory.swift */,
-				B593D5E32357A07800B4D87E /* PostsPresenter.swift */,
-				B593D5EA2357A5F400B4D87E /* PostsListViewController.swift */,
-				B593D5EB2357A5F400B4D87E /* PostsListViewController.xib */,
-				B593D5F02357A89D00B4D87E /* PostsAdapter.swift */,
-				B593D5F22357AC5A00B4D87E /* PostTableViewCell.swift */,
-				B593D5F72357B13600B4D87E /* PostManager.swift */,
+				B593D607235B51EA00B4D87E /* Sources */,
 			);
 			path = PostFeature;
 			sourceTree = "<group>";
@@ -262,6 +267,51 @@
 				B593D5C823579E9C00B4D87E /* Info.plist */,
 			);
 			path = PostFeatureTests;
+			sourceTree = "<group>";
+		};
+		B593D5FE235B4E2400B4D87E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B593D58123579D2100B4D87E /* Info.plist */,
+				B593D603235B4ECE00B4D87E /* LocalizablePostScreen.strings */,
+				B593D616235B545B00B4D87E /* LocalizableDetailsScreen.strings */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		B593D607235B51EA00B4D87E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B593D5F72357B13600B4D87E /* PostManager.swift */,
+				B593D5B023579E2800B4D87E /* PostCoordinator.swift */,
+				B593D5E12357A05800B4D87E /* PostPresenterFactory.swift */,
+				B593D608235B51FF00B4D87E /* PostScreen */,
+				B593D609235B521A00B4D87E /* DetailsScreen */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B593D608235B51FF00B4D87E /* PostScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B593D5E32357A07800B4D87E /* PostsPresenter.swift */,
+				B593D5EA2357A5F400B4D87E /* PostsListViewController.swift */,
+				B593D5EB2357A5F400B4D87E /* PostsListViewController.xib */,
+				B593D5F22357AC5A00B4D87E /* PostTableViewCell.swift */,
+				B593D5FC235B41CF00B4D87E /* PostLocalizer.swift */,
+			);
+			path = PostScreen;
+			sourceTree = "<group>";
+		};
+		B593D609235B521A00B4D87E /* DetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B593D60A235B523400B4D87E /* DetailsPresenter.swift */,
+				B593D60C235B524100B4D87E /* DetailsViewController.swift */,
+				B593D60D235B524100B4D87E /* DetailsViewController.xib */,
+				B593D610235B524E00B4D87E /* DetailsLocalizer.swift */,
+			);
+			path = DetailsScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,7 +501,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B593D617235B54D400B4D87E /* LocalizableDetailsScreen.strings in Resources */,
 				B593D5ED2357A5F400B4D87E /* PostsListViewController.xib in Resources */,
+				B593D601235B4ECE00B4D87E /* LocalizablePostScreen.strings in Resources */,
+				B593D60F235B524100B4D87E /* DetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,12 +547,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B593D5E42357A07800B4D87E /* PostsPresenter.swift in Sources */,
+				B593D5FD235B41CF00B4D87E /* PostLocalizer.swift in Sources */,
 				B593D5EC2357A5F400B4D87E /* PostsListViewController.swift in Sources */,
-				B593D5F12357A89D00B4D87E /* PostsAdapter.swift in Sources */,
 				B593D5D723579F1000B4D87E /* PostCoordinator.swift in Sources */,
+				B593D611235B524E00B4D87E /* DetailsLocalizer.swift in Sources */,
 				B593D5F82357B13600B4D87E /* PostManager.swift in Sources */,
 				B593D5E22357A05800B4D87E /* PostPresenterFactory.swift in Sources */,
 				B593D5F32357AC5A00B4D87E /* PostTableViewCell.swift in Sources */,
+				B593D60B235B523400B4D87E /* DetailsPresenter.swift in Sources */,
+				B593D60E235B524100B4D87E /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +604,22 @@
 				B593D57F23579D2100B4D87E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B593D603235B4ECE00B4D87E /* LocalizablePostScreen.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B593D602235B4ECE00B4D87E /* en */,
+			);
+			name = LocalizablePostScreen.strings;
+			sourceTree = "<group>";
+		};
+		B593D616235B545B00B4D87E /* LocalizableDetailsScreen.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B593D615235B545B00B4D87E /* en */,
+			);
+			name = LocalizableDetailsScreen.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -675,7 +747,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MS48YPHB8N;
-				INFOPLIST_FILE = PostFeature/Info.plist;
+				INFOPLIST_FILE = PostFeature/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -695,7 +767,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MS48YPHB8N;
-				INFOPLIST_FILE = PostFeature/Info.plist;
+				INFOPLIST_FILE = PostFeature/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -801,7 +873,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PostFeature/Info.plist;
+				INFOPLIST_FILE = PostFeature/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -829,7 +901,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PostFeature/Info.plist;
+				INFOPLIST_FILE = PostFeature/SupportingFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

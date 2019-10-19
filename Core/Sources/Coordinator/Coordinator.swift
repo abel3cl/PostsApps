@@ -2,5 +2,7 @@ import Foundation
 import UIKit
 
 public protocol Coordinator {
-    func start() -> UIViewController
+    var nav: UINavigationController { get }
+    func start()
+    func back()
 }

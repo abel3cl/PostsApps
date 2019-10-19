@@ -2,6 +2,7 @@ import Core
 import UIKit
 
 protocol PostsListView: AnyObject {
+    func set(title: String)
     func reloadData()
     func showError()
 }
@@ -27,21 +28,23 @@ final class PostsListViewController: UIViewController {
         let tableView = UITableView(frame: view.bounds)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(PostTableViewCell.self)
+        tableView.rowHeight = UITableView.automaticDimension
+
         self.tableView = tableView
         view.addSubviewFillingParent(tableView)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         presenter.attachView(self)
         presenter.viewDidLoad()
     }
 }
 
 extension PostsListViewController: PostsListView {
+    func set(title: String) {
+        navigationItem.title = title
+    }
     func reloadData() {
         tableView?.reloadData()
     }
@@ -55,12 +58,18 @@ extension PostsListViewController: UITableViewDataSource {
         return presenter.numberOfRows()
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: PostTableViewCell = tableView.dequeue()
+
+        let cell: PostTableViewCell = tableView.dequeue(defaultCell: .init(style: .subtitle,
+                                                                           reuseIdentifier: PostTableViewCell.id))
+
         presenter.set(cell: cell, at: indexPath.row)
         return cell
     }
 }
 
 extension PostsListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didSelect(at: indexPath.row)
+    }
 
 }

@@ -1,21 +1,34 @@
 import UIKit
 import CoreData
+import Adapter
+import PostFeature
+import Networking
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    let navigationManager = NavigationManager()
+    let adapter = PostAdapter(client: HTTPClient(executor: HTTPClientExecutor()))
+    var postManager: PostManager?
     
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
 
         let window = UIWindow(frame: UIScreen.main.bounds)
-        navigationManager.buildNavigation(on: window)        
+        let navigationController = UINavigationController()
+        window.rootViewController = navigationController
+        initManagers(navigation: navigationController)
+
         self.window = window
+        window.makeKeyAndVisible()
         
         return true
+    }
+
+    private func initManagers(navigation: UINavigationController) {
+        postManager = PostManager(nav: navigation, adapter: adapter)
+
+        postManager?.start()
     }
 
     // MARK: - Core Data stack

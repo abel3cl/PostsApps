@@ -5,9 +5,11 @@ public extension UITableView {
     func register<Cell: UITableViewCell>(_: Cell.Type) {
         register(Cell.self, forCellReuseIdentifier: Cell.id)
     }
-    func dequeue<Cell: UITableViewCell>() -> Cell {
+    func dequeue<Cell: UITableViewCell>(defaultCell: Cell?) -> Cell {
         if let cell = dequeueReusableCell(withIdentifier: Cell.id) as? Cell {
             return cell
+        } else if let defaultCell = defaultCell {
+            return defaultCell
         } else {
             fatalError("\(Cell.self) can't be dequeued")
         }

@@ -20,7 +20,6 @@
 		B593D5662356857800B4D87E /* Adapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B593D5642356857800B4D87E /* Adapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B593D5D523579EF000B4D87E /* PostFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B593D5D423579EF000B4D87E /* PostFeature.framework */; };
 		B593D5D623579EF000B4D87E /* PostFeature.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B593D5D423579EF000B4D87E /* PostFeature.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B593D5E92357A4D100B4D87E /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D5E82357A4D100B4D87E /* NavigationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +75,6 @@
 		B50358A42356698900A7C51A /* HTTPDebugExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDebugExecutor.swift; sourceTree = "<group>"; };
 		B593D5642356857800B4D87E /* Adapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Adapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B593D5D423579EF000B4D87E /* PostFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PostFeature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B593D5E82357A4D100B4D87E /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +137,6 @@
 				B50358A22356683F00A7C51A /* InfoDebug.plist */,
 				B503587023565E8A00A7C51A /* PostAppsClient.xcdatamodeld */,
 				B50358A42356698900A7C51A /* HTTPDebugExecutor.swift */,
-				B593D5E82357A4D100B4D87E /* NavigationManager.swift */,
 			);
 			path = PostAppsClient;
 			sourceTree = "<group>";
@@ -309,7 +306,6 @@
 				B503586C23565E8A00A7C51A /* ViewController.swift in Sources */,
 				B50358A52356698900A7C51A /* HTTPDebugExecutor.swift in Sources */,
 				B503586823565E8A00A7C51A /* AppDelegate.swift in Sources */,
-				B593D5E92357A4D100B4D87E /* NavigationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

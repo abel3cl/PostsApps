@@ -16,6 +16,7 @@
 		B593D5AF23579DF600B4D87E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D5AE23579DF600B4D87E /* Coordinator.swift */; };
 		B593D5F62357ADC800B4D87E /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D5F52357ADC800B4D87E /* UITableView+Utils.swift */; };
 		B593D5FB2357B32E00B4D87E /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D5FA2357B32E00B4D87E /* UIView+Utils.swift */; };
+		B593D606235B500A00B4D87E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D605235B500A00B4D87E /* Localizable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		B593D5AE23579DF600B4D87E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B593D5F52357ADC800B4D87E /* UITableView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
 		B593D5FA2357B32E00B4D87E /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
+		B593D605235B500A00B4D87E /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		B50358332353495000A7C51A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B593D604235B4FFA00B4D87E /* Localizable */,
 				B593D5F92357B32300B4D87E /* UIView+Utils */,
 				B593D5F42357ADB500B4D87E /* UITableView+Utils */,
 				B593D5AD23579DEB00B4D87E /* Coordinator */,
@@ -142,6 +145,14 @@
 				B593D5FA2357B32E00B4D87E /* UIView+Utils.swift */,
 			);
 			path = "UIView+Utils";
+			sourceTree = "<group>";
+		};
+		B593D604235B4FFA00B4D87E /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				B593D605235B500A00B4D87E /* Localizable.swift */,
+			);
+			path = Localizable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B593D5AF23579DF600B4D87E /* Coordinator.swift in Sources */,
+				B593D606235B500A00B4D87E /* Localizable.swift in Sources */,
 				B50358372353498300A7C51A /* User.swift in Sources */,
 				B50358392353498A00A7C51A /* Comment.swift in Sources */,
 				B50358352353497D00A7C51A /* Post.swift in Sources */,

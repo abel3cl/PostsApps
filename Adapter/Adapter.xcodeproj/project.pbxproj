@@ -20,6 +20,10 @@
 		B593D561235680CA00B4D87E /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D55D235680C500B4D87E /* UserResponse.swift */; };
 		B593D562235680CA00B4D87E /* CommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D55E235680C500B4D87E /* CommentResponse.swift */; };
 		B593D5632356828800B4D87E /* PostsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50358CE23566D0A00A7C51A /* PostsAdapter.swift */; };
+		B593D619235B55C800B4D87E /* PostAdapterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D618235B55C800B4D87E /* PostAdapterList.swift */; };
+		B593D61B235B55D200B4D87E /* PostAdapterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D61A235B55D200B4D87E /* PostAdapterUser.swift */; };
+		B593D61E235B560300B4D87E /* PostMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D61D235B560300B4D87E /* PostMapper.swift */; };
+		B593D620235B56CF00B4D87E /* PostAdapterComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D61F235B56CF00B4D87E /* PostAdapterComment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,10 @@
 		B593D55C235680C500B4D87E /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
 		B593D55D235680C500B4D87E /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		B593D55E235680C500B4D87E /* CommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentResponse.swift; sourceTree = "<group>"; };
+		B593D618235B55C800B4D87E /* PostAdapterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAdapterList.swift; sourceTree = "<group>"; };
+		B593D61A235B55D200B4D87E /* PostAdapterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAdapterUser.swift; sourceTree = "<group>"; };
+		B593D61D235B560300B4D87E /* PostMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMapper.swift; sourceTree = "<group>"; };
+		B593D61F235B56CF00B4D87E /* PostAdapterComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAdapterComment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +116,14 @@
 			isa = PBXGroup;
 			children = (
 				B50358CE23566D0A00A7C51A /* PostsAdapter.swift */,
+				B593D618235B55C800B4D87E /* PostAdapterList.swift */,
+				B593D61A235B55D200B4D87E /* PostAdapterUser.swift */,
+				B593D61F235B56CF00B4D87E /* PostAdapterComment.swift */,
 				B50358B723566CF600A7C51A /* Adapter.h */,
 				B50358B823566CF600A7C51A /* Info.plist */,
 				B50358DA23566EA700A7C51A /* Command */,
 				B593D55F235680C500B4D87E /* Responses */,
+				B593D61C235B55EE00B4D87E /* Maps */,
 			);
 			path = Adapter;
 			sourceTree = "<group>";
@@ -151,6 +163,14 @@
 				B593D55E235680C500B4D87E /* CommentResponse.swift */,
 			);
 			path = Responses;
+			sourceTree = "<group>";
+		};
+		B593D61C235B55EE00B4D87E /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				B593D61D235B560300B4D87E /* PostMapper.swift */,
+			);
+			path = Maps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,10 +283,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B593D61B235B55D200B4D87E /* PostAdapterUser.swift in Sources */,
 				B593D561235680CA00B4D87E /* UserResponse.swift in Sources */,
 				B593D55A235680A400B4D87E /* HTTPCommand.swift in Sources */,
+				B593D620235B56CF00B4D87E /* PostAdapterComment.swift in Sources */,
+				B593D61E235B560300B4D87E /* PostMapper.swift in Sources */,
 				B593D560235680CA00B4D87E /* PostResponse.swift in Sources */,
 				B593D5632356828800B4D87E /* PostsAdapter.swift in Sources */,
+				B593D619235B55C800B4D87E /* PostAdapterList.swift in Sources */,
 				B593D562235680CA00B4D87E /* CommentResponse.swift in Sources */,
 				B593D55B235680A700B4D87E /* Dispatcher.swift in Sources */,
 			);
