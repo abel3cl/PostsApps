@@ -24,6 +24,10 @@
 		B593D61B235B55D200B4D87E /* PostAdapterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D61A235B55D200B4D87E /* PostAdapterUser.swift */; };
 		B593D61E235B560300B4D87E /* PostMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D61D235B560300B4D87E /* PostMapper.swift */; };
 		B593D620235B56CF00B4D87E /* PostAdapterComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D61F235B56CF00B4D87E /* PostAdapterComment.swift */; };
+		B593D622235B6BD300B4D87E /* UserMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D621235B6BD300B4D87E /* UserMapper.swift */; };
+		B593D624235B6D9D00B4D87E /* CommentMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D623235B6D9D00B4D87E /* CommentMapper.swift */; };
+		B593D62D235C83AC00B4D87E /* AdapterConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D62C235C83AC00B4D87E /* AdapterConstants.swift */; };
+		B593D630235CAA5300B4D87E /* AdapterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D62F235CAA5300B4D87E /* AdapterError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,10 @@
 		B593D61A235B55D200B4D87E /* PostAdapterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAdapterUser.swift; sourceTree = "<group>"; };
 		B593D61D235B560300B4D87E /* PostMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMapper.swift; sourceTree = "<group>"; };
 		B593D61F235B56CF00B4D87E /* PostAdapterComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAdapterComment.swift; sourceTree = "<group>"; };
+		B593D621235B6BD300B4D87E /* UserMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapper.swift; sourceTree = "<group>"; };
+		B593D623235B6D9D00B4D87E /* CommentMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentMapper.swift; sourceTree = "<group>"; };
+		B593D62C235C83AC00B4D87E /* AdapterConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterConstants.swift; sourceTree = "<group>"; };
+		B593D62F235CAA5300B4D87E /* AdapterError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,9 +129,11 @@
 				B593D61F235B56CF00B4D87E /* PostAdapterComment.swift */,
 				B50358B723566CF600A7C51A /* Adapter.h */,
 				B50358B823566CF600A7C51A /* Info.plist */,
+				B593D62E235CAA3C00B4D87E /* Error */,
 				B50358DA23566EA700A7C51A /* Command */,
 				B593D55F235680C500B4D87E /* Responses */,
 				B593D61C235B55EE00B4D87E /* Maps */,
+				B593D62C235C83AC00B4D87E /* AdapterConstants.swift */,
 			);
 			path = Adapter;
 			sourceTree = "<group>";
@@ -169,8 +179,18 @@
 			isa = PBXGroup;
 			children = (
 				B593D61D235B560300B4D87E /* PostMapper.swift */,
+				B593D621235B6BD300B4D87E /* UserMapper.swift */,
+				B593D623235B6D9D00B4D87E /* CommentMapper.swift */,
 			);
 			path = Maps;
+			sourceTree = "<group>";
+		};
+		B593D62E235CAA3C00B4D87E /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				B593D62F235CAA5300B4D87E /* AdapterError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,11 +305,15 @@
 			files = (
 				B593D61B235B55D200B4D87E /* PostAdapterUser.swift in Sources */,
 				B593D561235680CA00B4D87E /* UserResponse.swift in Sources */,
+				B593D624235B6D9D00B4D87E /* CommentMapper.swift in Sources */,
+				B593D622235B6BD300B4D87E /* UserMapper.swift in Sources */,
 				B593D55A235680A400B4D87E /* HTTPCommand.swift in Sources */,
 				B593D620235B56CF00B4D87E /* PostAdapterComment.swift in Sources */,
 				B593D61E235B560300B4D87E /* PostMapper.swift in Sources */,
 				B593D560235680CA00B4D87E /* PostResponse.swift in Sources */,
+				B593D62D235C83AC00B4D87E /* AdapterConstants.swift in Sources */,
 				B593D5632356828800B4D87E /* PostsAdapter.swift in Sources */,
+				B593D630235CAA5300B4D87E /* AdapterError.swift in Sources */,
 				B593D619235B55C800B4D87E /* PostAdapterList.swift in Sources */,
 				B593D562235680CA00B4D87E /* CommentResponse.swift in Sources */,
 				B593D55B235680A700B4D87E /* Dispatcher.swift in Sources */,

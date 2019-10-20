@@ -7,7 +7,13 @@ import Networking
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    let adapter = PostAdapter(client: HTTPClient(executor: HTTPClientExecutor()))
+    #if DEBUG
+    let adapter = PostAdapter(context: .init(baseUrl: "https://jsonplaceholder.typicode.com"),
+                              client: .init(executor: HTTPClientDebugExecutor(wrapping: HTTPClientExecutor())))
+    #else
+    let adapter = PostAdapter(context: .init(baseUrl: "https://jsonplaceholder.typicode.com"),
+                              client: .init(executor: HTTPClientExecutor()))
+    #endif
     var postManager: PostManager?
     
     var window: UIWindow?

@@ -25,11 +25,14 @@ final class PostsPresenter {
         self.localizer = localizer
     }
 
-    private func handleResult(result: Result<[Post], Error>) {
+    private func handleResult(result: Result<[Post], AdapterError>) {
         switch result {
         case .success(let posts):
             self.posts = posts
             view?.reloadData()
+        case .failure(.noConection):
+                break
+//            view?.showError(message: )
         case .failure(let error):
             break
         }

@@ -10,14 +10,15 @@ struct HTTPCommand<Decode, Map> where Decode: Decodable {
 
     func perform(in client: HTTPClient,
                  dispatcher: Dispatcher,
-                 completion: @escaping (Result<Map, Error>) -> Void) {
+                 completion: @escaping (Result<Map, AdapterError>) -> Void) {
 
-        let work: (@escaping (Result<Map, Error>) -> Void) -> Void = { callback in
+        let work: (@escaping (Result<Map, AdapterError>) -> Void) -> Void = { callback in
             client.request(self.request) { result in
                 let aResult = result
                     .map(self.toData)
                     .flatMap(self.toJson)
                     .flatMap(self.toMap)
+                    .mapError(self.transformError)
                 callback(aResult)
             }
         }
@@ -43,6 +44,14 @@ struct HTTPCommand<Decode, Map> where Decode: Decodable {
 
     func toMap(decode: Decode) -> Result<Map, Error> {
         return .success(map(decode))
+    }
+
+    func transformError(originalError: Error) -> AdapterError {
+        if let urlError = originalError as? URLError,
+            urlError.code == URLError.Code.cannotConnectToHost {
+            return .noConection
+        }
+        return .original(error: originalError)
     }
 
 }

@@ -6,11 +6,17 @@ public struct PostAdapter {
     public var user: PostAdapterUser
     public var comment: PostAdapterComment
 
-    public init(client: HTTPClient) {
-        post = PostAdapterListImpl(client: client)
-        user = PostAdapterUserImpl(client: client)
-        comment = PostAdapterCommentImpl(client: client)
+    public init(context: AdapterContext, client: HTTPClient) {
+        post = PostAdapterListImpl(context: context, client: client)
+        user = PostAdapterUserImpl(context: context, client: client)
+        comment = PostAdapterCommentImpl(context: context, client: client)
     }
 }
 
+public struct AdapterContext {
+    let baseUrl: String
 
+    public init(baseUrl: String) {
+        self.baseUrl = baseUrl
+    }
+}

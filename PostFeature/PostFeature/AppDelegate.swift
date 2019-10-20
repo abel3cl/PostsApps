@@ -1,12 +1,14 @@
 import UIKit
 import Networking
+import Adapter
 import PostFeature
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let client = HTTPClient(executor: HTTPClientExecutor())
+    let adapter = PostAdapter(context: .init(baseUrl: "https://jsonplaceholder.typicode.com"),
+                              client: .init(executor: HTTPClientExecutor()))
     var postManager: PostManager?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -26,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func initManagers(navigation: UINavigationController) {
-        postManager = PostManager(nav: navigation, client: client)
+        postManager = PostManager(nav: navigation, adapter: adapter)
     }
 
 }

@@ -53,13 +53,13 @@ extension User {
 
 extension User.Address {
     public struct Geo {
-        public let lat: String
-        public let lng: String
+        public let latitude: String
+        public let longitude: String
 
-        public init(lat: String,
-                    lng: String) {
-            self.lat = lat
-            self.lng = lng
+        public init(latitude: String,
+                    longitude: String) {
+            self.latitude = latitude
+            self.longitude = longitude
         }
     }
 }
@@ -68,14 +68,14 @@ extension User {
     public struct Company {
         public let name: String
         public let catchPhrase: String
-        public let bs: String
+        public let businessServices: String
 
         public init(name: String,
                     catchPhrase: String,
-                    bs: String) {
+                    businessServices: String) {
             self.name = name
             self.catchPhrase = catchPhrase
-            self.bs = bs
+            self.businessServices = businessServices
         }
     }
 }

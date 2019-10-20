@@ -2,6 +2,7 @@ import Core
 import UIKit
 
 protocol PostsListView: AnyObject {
+    func isLoading(_ loading: Bool)
     func set(title: String)
     func reloadData()
     func showError()
@@ -42,6 +43,10 @@ final class PostsListViewController: UIViewController {
 }
 
 extension PostsListViewController: PostsListView {
+    func isLoading(_ loading: Bool) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = loading
+        tableView?.isHidden = !loading
+    }
     func set(title: String) {
         navigationItem.title = title
     }
