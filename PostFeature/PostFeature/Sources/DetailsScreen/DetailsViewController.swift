@@ -22,9 +22,9 @@ final class DetailsViewController: UIViewController {
     @IBOutlet private weak var authorValueLabel: UILabel!
     @IBOutlet private weak var emailTitleLabel: UILabel!
     @IBOutlet private weak var emailValueLabel: UILabel!
-    @IBOutlet weak var numberOfCommentsLabel: UILabel!
+    @IBOutlet private weak var numberOfCommentsLabel: UILabel!
     
-    let presenter: DetailsPresenterProtocol
+    private let presenter: DetailsPresenterProtocol
 
     init(presenter: DetailsPresenterProtocol) {
         self.presenter = presenter
@@ -40,6 +40,11 @@ final class DetailsViewController: UIViewController {
 
         presenter.attachView(self)
         presenter.viewDidLoad()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter.viewDidAppear()
     }
 }
 

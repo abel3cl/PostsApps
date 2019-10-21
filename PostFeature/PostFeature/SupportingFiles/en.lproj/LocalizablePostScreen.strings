@@ -1,3 +1,5 @@
 "post.title" = "List of Posts";
 "cell.title" = "";
 "cell.subtitle" = "";
+
+"error.default" = "Posts can't load right now";

@@ -5,11 +5,13 @@ protocol PostsListView: AnyObject {
     func isLoading(_ loading: Bool)
     func set(title: String)
     func reloadData()
+    func offlineLabel(title: String)
+    func offlineLabel(isHidden: Bool)
     func showError()
 }
 
 final class PostsListViewController: UIViewController {
-
+    var offlineMessageLabel: UILabel?
     var tableView: UITableView?
 
     let presenter: PostsPresenterProtocol
@@ -25,14 +27,37 @@ final class PostsListViewController: UIViewController {
 
     override func loadView() {
         super.loadView()
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        self.offlineMessageLabel = label
 
         let tableView = UITableView(frame: view.bounds)
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
 
         self.tableView = tableView
+
+        view.addSubviewFillingParent(label)
         view.addSubviewFillingParent(tableView)
+
+        NSLayoutConstraint.activate(
+            [
+                label.topAnchor.constraint(equalTo: view.topAnchor),
+                label.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                label.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+
+                label.bottomAnchor.constraint(equalTo: tableView.topAnchor),
+                tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ]
+        )
     }
 
     override func viewDidLoad() {
@@ -40,18 +65,31 @@ final class PostsListViewController: UIViewController {
         presenter.attachView(self)
         presenter.viewDidLoad()
     }
+
+    @objc private func refresh() {
+        presenter.refresh()
+    }
 }
 
 extension PostsListViewController: PostsListView {
     func isLoading(_ loading: Bool) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = loading
         tableView?.isHidden = !loading
+        if !loading {
+            tableView?.refreshControl?.endRefreshing()
+        }
     }
     func set(title: String) {
         navigationItem.title = title
     }
     func reloadData() {
         tableView?.reloadData()
+    }
+    func offlineLabel(title: String) {
+        offlineMessageLabel?.text = title
+    }
+    func offlineLabel(isHidden: Bool) {
+        offlineMessageLabel?.isHidden = isHidden
     }
     func showError() {
 

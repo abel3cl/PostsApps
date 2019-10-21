@@ -7,5 +7,7 @@ final class PostLocalizer: Localizable {
         case title = "post.title"
         case cellTitle = "cell.title"
         case cellSubtitle = "cell.subtitle"
+
+        case errorDefault = "error.default"
     }
 }

@@ -2,7 +2,8 @@ import Core
 import Adapter
 
 protocol DetailsPresenterProtocol {
-    func viewDidLoad()    
+    func viewDidLoad()
+    func viewDidAppear()
     func attachView(_ view: DetailsView)    
 }
 
@@ -62,6 +63,7 @@ final class DetailsPresenter {
 }
 
 extension DetailsPresenter: DetailsPresenterProtocol {
+
     func viewDidLoad() {
         view?.set(title: localizer.localize(key: .title))
 
@@ -75,9 +77,10 @@ extension DetailsPresenter: DetailsPresenterProtocol {
         userAdapter.getUserDetails(post: post, completion: handleUserResult)
         commentAdapter.getComments(post: post, completion: handleCommentsResult)
     }
+    func viewDidAppear() {
 
+    }
     func attachView(_ view: DetailsView) {
         self.view = view
     }
-
 }

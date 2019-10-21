@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B50E0593235CEFE600405523 /* Comment+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50E0592235CEFE600405523 /* Comment+Codable.swift */; };
+		B50E059B235E4F2300405523 /* Post+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50E059A235E4F2300405523 /* Post+Codable.swift */; };
+		B50E059E235E4F3700405523 /* User+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50E059D235E4F3700405523 /* User+Codable.swift */; };
 		B593D57423579D2000B4D87E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D57323579D2000B4D87E /* AppDelegate.swift */; };
 		B593D57D23579D2100B4D87E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B593D57C23579D2100B4D87E /* Assets.xcassets */; };
 		B593D58023579D2100B4D87E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B593D57E23579D2100B4D87E /* LaunchScreen.storyboard */; };
@@ -38,7 +41,6 @@
 		B593D617235B54D400B4D87E /* LocalizableDetailsScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = B593D616235B545B00B4D87E /* LocalizableDetailsScreen.strings */; };
 		B593D627235C802100B4D87E /* LocalizableDetailsScreen.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = B593D629235C802100B4D87E /* LocalizableDetailsScreen.stringsdict */; };
 		B593D62B235C837200B4D87E /* PostFeatureConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D62A235C837200B4D87E /* PostFeatureConstants.swift */; };
-		B593D638235CC33900B4D87E /* UIViewController+Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D637235CC33900B4D87E /* UIViewController+Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B50E0592235CEFE600405523 /* Comment+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comment+Codable.swift"; sourceTree = "<group>"; };
+		B50E059A235E4F2300405523 /* Post+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+Codable.swift"; sourceTree = "<group>"; };
+		B50E059D235E4F3700405523 /* User+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Codable.swift"; sourceTree = "<group>"; };
 		B593D57023579D2000B4D87E /* PostFeatureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostFeatureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B593D57323579D2000B4D87E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B593D57C23579D2100B4D87E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,7 +149,6 @@
 		B593D615235B545B00B4D87E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableDetailsScreen.strings; sourceTree = "<group>"; };
 		B593D628235C802100B4D87E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/LocalizableDetailsScreen.stringsdict; sourceTree = "<group>"; };
 		B593D62A235C837200B4D87E /* PostFeatureConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeatureConstants.swift; sourceTree = "<group>"; };
-		B593D637235CC33900B4D87E /* UIViewController+Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Message.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B50E0596235E4EB800405523 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				B50E059C235E4F2C00405523 /* Codable */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		B50E059C235E4F2C00405523 /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				B50E0592235CEFE600405523 /* Comment+Codable.swift */,
+				B50E059A235E4F2300405523 /* Post+Codable.swift */,
+				B50E059D235E4F3700405523 /* User+Codable.swift */,
+			);
+			path = Codable;
+			sourceTree = "<group>";
+		};
 		B593D56723579D2000B4D87E = {
 			isa = PBXGroup;
 			children = (
@@ -295,7 +317,7 @@
 				B593D62A235C837200B4D87E /* PostFeatureConstants.swift */,
 				B593D608235B51FF00B4D87E /* PostScreen */,
 				B593D609235B521A00B4D87E /* DetailsScreen */,
-				B593D637235CC33900B4D87E /* UIViewController+Message.swift */,
+				B50E0596235E4EB800405523 /* Persistence */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -556,9 +578,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B50E0593235CEFE600405523 /* Comment+Codable.swift in Sources */,
+				B50E059E235E4F3700405523 /* User+Codable.swift in Sources */,
 				B593D5E42357A07800B4D87E /* PostsPresenter.swift in Sources */,
 				B593D62B235C837200B4D87E /* PostFeatureConstants.swift in Sources */,
 				B593D5FD235B41CF00B4D87E /* PostLocalizer.swift in Sources */,
+				B50E059B235E4F2300405523 /* Post+Codable.swift in Sources */,
 				B593D5EC2357A5F400B4D87E /* PostsListViewController.swift in Sources */,
 				B593D5D723579F1000B4D87E /* PostCoordinator.swift in Sources */,
 				B593D611235B524E00B4D87E /* DetailsLocalizer.swift in Sources */,
@@ -566,7 +591,6 @@
 				B593D5E22357A05800B4D87E /* PostPresenterFactory.swift in Sources */,
 				B593D5F32357AC5A00B4D87E /* PostTableViewCell.swift in Sources */,
 				B593D60B235B523400B4D87E /* DetailsPresenter.swift in Sources */,
-				B593D638235CC33900B4D87E /* UIViewController+Message.swift in Sources */,
 				B593D60E235B524100B4D87E /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
