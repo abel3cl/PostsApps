@@ -23,13 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B503587E23565E8D00A7C51A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B503585C23565E8A00A7C51A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B503586323565E8A00A7C51A;
-			remoteInfo = PostAppsClient;
-		};
 		B503588923565E8D00A7C51A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B503585C23565E8A00A7C51A /* Project object */;
@@ -62,7 +55,6 @@
 		B503587323565E8D00A7C51A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B503587623565E8D00A7C51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B503587823565E8D00A7C51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B503587D23565E8D00A7C51A /* PostAppsClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostAppsClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B503588823565E8D00A7C51A /* PostAppsClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostAppsClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B503588C23565E8D00A7C51A /* PostAppsClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAppsClientUITests.swift; sourceTree = "<group>"; };
 		B503588E23565E8D00A7C51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,13 +76,6 @@
 				B593D5D523579EF000B4D87E /* PostFeature.framework in Frameworks */,
 				B5FA2989235E904D00FDAC7B /* Networking.framework in Frameworks */,
 				B5FA29CD235FBF3400FDAC7B /* Core.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B503587A23565E8D00A7C51A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				B503586423565E8A00A7C51A /* PostAppsClient.app */,
-				B503587D23565E8D00A7C51A /* PostAppsClientTests.xctest */,
 				B503588823565E8D00A7C51A /* PostAppsClientUITests.xctest */,
 			);
 			name = Products;
@@ -187,24 +171,6 @@
 			productReference = B503586423565E8A00A7C51A /* PostAppsClient.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B503587C23565E8D00A7C51A /* PostAppsClientTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B503589423565E8D00A7C51A /* Build configuration list for PBXNativeTarget "PostAppsClientTests" */;
-			buildPhases = (
-				B503587923565E8D00A7C51A /* Sources */,
-				B503587A23565E8D00A7C51A /* Frameworks */,
-				B503587B23565E8D00A7C51A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B503587F23565E8D00A7C51A /* PBXTargetDependency */,
-			);
-			name = PostAppsClientTests;
-			productName = PostAppsClientTests;
-			productReference = B503587D23565E8D00A7C51A /* PostAppsClientTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		B503588723565E8D00A7C51A /* PostAppsClientUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B503589723565E8D00A7C51A /* Build configuration list for PBXNativeTarget "PostAppsClientUITests" */;
@@ -236,10 +202,6 @@
 					B503586323565E8A00A7C51A = {
 						CreatedOnToolsVersion = 11.0;
 					};
-					B503587C23565E8D00A7C51A = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = B503586323565E8A00A7C51A;
-					};
 					B503588723565E8D00A7C51A = {
 						CreatedOnToolsVersion = 11.0;
 						TestTargetID = B503586323565E8A00A7C51A;
@@ -260,7 +222,6 @@
 			projectRoot = "";
 			targets = (
 				B503586323565E8A00A7C51A /* PostAppsClient */,
-				B503587C23565E8D00A7C51A /* PostAppsClientTests */,
 				B503588723565E8D00A7C51A /* PostAppsClientUITests */,
 			);
 		};
@@ -273,13 +234,6 @@
 			files = (
 				B503587723565E8D00A7C51A /* LaunchScreen.storyboard in Resources */,
 				B503587423565E8D00A7C51A /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B503587B23565E8D00A7C51A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,13 +256,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B503587923565E8D00A7C51A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B503588423565E8D00A7C51A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -320,11 +267,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B503587F23565E8D00A7C51A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B503586323565E8A00A7C51A /* PostAppsClient */;
-			targetProxy = B503587E23565E8D00A7C51A /* PBXContainerItemProxy */;
-		};
 		B503588A23565E8D00A7C51A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B503586323565E8A00A7C51A /* PostAppsClient */;
@@ -496,50 +438,6 @@
 			};
 			name = Release;
 		};
-		B503589523565E8D00A7C51A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MS48YPHB8N;
-				INFOPLIST_FILE = PostAppsClientTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.abel.PostAppsClientTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PostAppsClient.app/PostAppsClient";
-			};
-			name = Debug;
-		};
-		B503589623565E8D00A7C51A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MS48YPHB8N;
-				INFOPLIST_FILE = PostAppsClientTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.abel.PostAppsClientTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PostAppsClient.app/PostAppsClient";
-			};
-			name = Release;
-		};
 		B503589823565E8D00A7C51A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -597,15 +495,6 @@
 			buildConfigurations = (
 				B503589223565E8D00A7C51A /* Debug */,
 				B503589323565E8D00A7C51A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B503589423565E8D00A7C51A /* Build configuration list for PBXNativeTarget "PostAppsClientTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B503589523565E8D00A7C51A /* Debug */,
-				B503589623565E8D00A7C51A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
