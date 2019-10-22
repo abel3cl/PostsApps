@@ -7,7 +7,7 @@ final class CommentCommandTests: XCTestCase {
     private static let context = AdapterContext(baseUrl: "baseUrl.com/api")
     private let commandFactory = PostAdapterCommandFactory(context: context)
 
-    func test() {
+    func test_getComments() {
         let client = HTTPClientMock.inspecting { request in
             XCTAssertEqual("GET", request.httpMethod)
             XCTAssertEqual("baseUrl.com/api/comments?postId=1", request.url?.absoluteString)
