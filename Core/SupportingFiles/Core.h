@@ -1,11 +1,3 @@
-//
-//  Core.h
-//  Core
-//
-//  Created by Abel Castro on 13/10/2019.
-//  Copyright © 2019 Abel Castro. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 //! Project version number for Core.

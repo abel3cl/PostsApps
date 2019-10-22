@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         postManager?.start()
         window.makeKeyAndVisible()
-        
+
         return true
     }
 
@@ -32,4 +32,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-

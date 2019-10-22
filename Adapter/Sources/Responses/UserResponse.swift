@@ -22,7 +22,7 @@ extension UserResponse {
     }
 }
 
-extension UserResponse.AddressResponse : Codable {}
+extension UserResponse.AddressResponse: Codable {}
 
 extension UserResponse.AddressResponse {
     struct GeoResponse {

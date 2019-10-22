@@ -1,11 +1,3 @@
-//
-//  Adapter.h
-//  Adapter
-//
-//  Created by Abel Castro on 15/10/2019.
-//  Copyright © 2019 Abel Castro. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 //! Project version number for Adapter.

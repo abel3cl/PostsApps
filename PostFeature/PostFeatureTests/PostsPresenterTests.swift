@@ -65,13 +65,14 @@ final class PostsPresenterTests: XCTestCase {
 
         presenter.viewDidLoad()
 
-        let df = DateFormatter()
-        df.dateStyle = .full
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        formatter.dateStyle = .full
 
         XCTAssertEqual(view.reloadDataCount, 1)
         XCTAssertEqual(view.viewTitle, "List of Posts")
         XCTAssertEqual(view.reloadDataCount, 1)
-        XCTAssertEqual(view.offlineLabelTitle, "Your data is from: \(df.string(from: date))")
+        XCTAssertEqual(view.offlineLabelTitle, "Your data is from: \(formatter.string(from: date))")
         XCTAssertEqual(view.offlineLabelIsHidden, false)
     }
 

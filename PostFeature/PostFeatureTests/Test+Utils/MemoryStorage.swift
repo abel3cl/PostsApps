@@ -8,15 +8,11 @@ final class MemoryStorage<StorableType: Codable>: Storage {
         self.result = mockResult
     }
     func save(models: [StorableType]) {
-//        self.models.append(models)
-
+        self.models.append(contentsOf: models)
     }
 
     func get() -> StorageResult<[StorableType], StorageError> {
         return result
     }
 
-
-
-    
 }

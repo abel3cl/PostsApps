@@ -58,7 +58,9 @@ extension PostsListViewController: PostsListView {
         UIApplication.shared.isNetworkActivityIndicatorVisible = loading
         tableView?.isHidden = loading
         if !loading {
-            tableView?.refreshControl?.endRefreshing()
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView?.refreshControl?.endRefreshing()
+            }
         }
     }
     func set(title: String) {

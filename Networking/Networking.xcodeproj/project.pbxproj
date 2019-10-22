@@ -10,15 +10,11 @@
 		B50357FF2353491900A7C51A /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50357F52353491900A7C51A /* Networking.framework */; };
 		B50358042353491900A7C51A /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50358032353491900A7C51A /* NetworkingTests.swift */; };
 		B50358062353491900A7C51A /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = B50357F82353491900A7C51A /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B503583D23534CAF00A7C51A /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503583C23534CAF00A7C51A /* PostResponse.swift */; };
-		B503583F23534CBA00A7C51A /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503583E23534CBA00A7C51A /* UserResponse.swift */; };
-		B503584123534CC300A7C51A /* CommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503584023534CC300A7C51A /* CommentResponse.swift */; };
 		B50358452353C5C100A7C51A /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50358442353C5C100A7C51A /* HTTPRequest.swift */; };
 		B50358482353C61A00A7C51A /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50358472353C61A00A7C51A /* Array+Utils.swift */; };
 		B503584A2353C75D00A7C51A /* Dictionary+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50358492353C75D00A7C51A /* Dictionary+Utils.swift */; };
 		B503584D2353C83C00A7C51A /* HTTPExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503584C2353C83C00A7C51A /* HTTPExecutor.swift */; };
 		B503584F2353C8A500A7C51A /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503584E2353C8A500A7C51A /* HTTPClient.swift */; };
-		B50358512353C8C100A7C51A /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50358502353C8C100A7C51A /* HTTPStatusCode.swift */; };
 		B503585823564C1800A7C51A /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503585723564C1800A7C51A /* HTTPError.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,15 +35,11 @@
 		B50357FE2353491900A7C51A /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50358032353491900A7C51A /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		B50358052353491900A7C51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B503583C23534CAF00A7C51A /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
-		B503583E23534CBA00A7C51A /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
-		B503584023534CC300A7C51A /* CommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentResponse.swift; sourceTree = "<group>"; };
 		B50358442353C5C100A7C51A /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		B50358472353C61A00A7C51A /* Array+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Utils.swift"; sourceTree = "<group>"; };
 		B50358492353C75D00A7C51A /* Dictionary+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Utils.swift"; sourceTree = "<group>"; };
 		B503584C2353C83C00A7C51A /* HTTPExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPExecutor.swift; sourceTree = "<group>"; };
 		B503584E2353C8A500A7C51A /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		B50358502353C8C100A7C51A /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		B503585723564C1800A7C51A /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,8 +65,8 @@
 		B50357EB2353491900A7C51A = {
 			isa = PBXGroup;
 			children = (
-				B503583A23534C8C00A7C51A /* Sources */,
 				B50357F72353491900A7C51A /* SupportingFiles */,
+				B503583A23534C8C00A7C51A /* Sources */,
 				B50358022353491900A7C51A /* Tests */,
 				B50357F62353491900A7C51A /* Products */,
 			);
@@ -101,8 +93,8 @@
 		B50358022353491900A7C51A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				B5FA29D4235FC11700FDAC7B /* SupportingFiles */,
 				B50358032353491900A7C51A /* NetworkingTests.swift */,
-				B50358052353491900A7C51A /* Info.plist */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -112,20 +104,8 @@
 			children = (
 				B50358462353C60E00A7C51A /* Utils */,
 				B50358422353C5A200A7C51A /* HTTP */,
-				B503583B23534C9F00A7C51A /* Responses */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		B503583B23534C9F00A7C51A /* Responses */ = {
-			isa = PBXGroup;
-			children = (
-				B503583C23534CAF00A7C51A /* PostResponse.swift */,
-				B503583E23534CBA00A7C51A /* UserResponse.swift */,
-				B503584023534CC300A7C51A /* CommentResponse.swift */,
-			);
-			name = Responses;
-			path = ../../Adapter/Adapter/Responses;
 			sourceTree = "<group>";
 		};
 		B50358422353C5A200A7C51A /* HTTP */ = {
@@ -159,10 +139,17 @@
 			children = (
 				B503584C2353C83C00A7C51A /* HTTPExecutor.swift */,
 				B503584E2353C8A500A7C51A /* HTTPClient.swift */,
-				B50358502353C8C100A7C51A /* HTTPStatusCode.swift */,
 				B503585723564C1800A7C51A /* HTTPError.swift */,
 			);
 			path = HTTPClient;
+			sourceTree = "<group>";
+		};
+		B5FA29D4235FC11700FDAC7B /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B50358052353491900A7C51A /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +174,7 @@
 				B50357F12353491900A7C51A /* Sources */,
 				B50357F22353491900A7C51A /* Frameworks */,
 				B50357F32353491900A7C51A /* Resources */,
+				B5FA29EA235FC37F00FDAC7B /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -269,19 +257,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B5FA29EA235FC37F00FDAC7B /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -z \"$CI\" ]; then\n    ${PROJECT_DIR}/../SwiftLint/swiftlint lint --path ${PROJECT_DIR}/Sources --config ../../SwiftLint/swiftlint.yml --reporter xcode\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B50357F12353491900A7C51A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B503583D23534CAF00A7C51A /* PostResponse.swift in Sources */,
-				B50358512353C8C100A7C51A /* HTTPStatusCode.swift in Sources */,
 				B50358452353C5C100A7C51A /* HTTPRequest.swift in Sources */,
 				B503584F2353C8A500A7C51A /* HTTPClient.swift in Sources */,
 				B503585823564C1800A7C51A /* HTTPError.swift in Sources */,
-				B503584123534CC300A7C51A /* CommentResponse.swift in Sources */,
 				B503584D2353C83C00A7C51A /* HTTPExecutor.swift in Sources */,
-				B503583F23534CBA00A7C51A /* UserResponse.swift in Sources */,
 				B50358482353C61A00A7C51A /* Array+Utils.swift in Sources */,
 				B503584A2353C75D00A7C51A /* Dictionary+Utils.swift in Sources */,
 			);
@@ -483,7 +488,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MS48YPHB8N;
-				INFOPLIST_FILE = NetworkingTests/Info.plist;
+				INFOPLIST_FILE = Tests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -502,7 +507,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MS48YPHB8N;
-				INFOPLIST_FILE = NetworkingTests/Info.plist;
+				INFOPLIST_FILE = Tests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

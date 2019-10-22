@@ -3,33 +3,35 @@ import Foundation
 public final class FileStorage<StorableType: Codable>: Storage {
 
     let subpath: String
+    let documentName: String = "Posts.json"
     let documents: URL?
 
     public init?(subpath: String = "\(String(describing: StorableType.self))") {
         self.subpath = subpath
 
         documents = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask,
-            appropriateFor: nil, create: false).appendingPathComponent(subpath)
-        let path = documents?.absoluteString ?? ""
-        print(path)
+                                                 appropriateFor: nil, create: false)
+            .appendingPathComponent(subpath, isDirectory: true)
+            .appendingPathComponent(documentName)
+        let path = documents?.path ?? ""
+
         if !FileManager.default.fileExists(atPath: path) {
-            do {
-                try FileManager.default.createDirectory(atPath: path,
-                                                withIntermediateDirectories: true,
-                                                attributes: [FileAttributeKey.modificationDate : Date()])
-            } catch {
-                print(error)
-            }
+            let result = FileManager.default.createFile(atPath: path,
+                                           contents: nil,
+                                           attributes: [FileAttributeKey.modificationDate: Date()])
+            print("file created")
+            print(result)
         }
 
     }
-    
+
     public func save(models: [StorableType]) {
         guard let documents = documents,
             let data = try? JSONEncoder().encode(models) else { return }
         do {
-            try FileManager.default.setAttributes([FileAttributeKey.modificationDate : Date()], ofItemAtPath: documents.path)
             try data.write(to: documents)
+            try FileManager.default.setAttributes([FileAttributeKey.modificationDate: Date()], ofItemAtPath: documents.path)
+
         } catch {
             print(error)
         }
@@ -48,9 +50,4 @@ public final class FileStorage<StorableType: Codable>: Storage {
             return .failure(StorageError.original(error: error))
         }
     }
-}
-
-public enum StorageError: Error {
-    case notFound
-    case original(error: Error)
 }

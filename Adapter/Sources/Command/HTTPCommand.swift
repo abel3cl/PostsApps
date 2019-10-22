@@ -8,7 +8,7 @@ struct HTTPCommand<Decode, Map> where Decode: Decodable {
     let decode: Decode.Type
     let map: (Decode) -> Map
 
-    func perform(in client: HTTPClient,
+    func perform(in client: HTTPClientProtocol,
                  dispatcher: Dispatcher,
                  completion: @escaping (Result<Map, AdapterError>) -> Void) {
 
@@ -61,4 +61,3 @@ struct HTTPCommand<Decode, Map> where Decode: Decodable {
     }
 
 }
-

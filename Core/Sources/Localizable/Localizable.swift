@@ -3,7 +3,7 @@ import Foundation
 public protocol Localizable: AnyObject {
     associatedtype LocalizableKey
     var tableName: String { get }
-    
+
     func localize(key: LocalizableKey) -> String
 }
 

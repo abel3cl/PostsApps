@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B50358232353493700A7C51A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50358192353493700A7C51A /* Core.framework */; };
-		B50358282353493700A7C51A /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50358272353493700A7C51A /* CoreTests.swift */; };
+		B50358282353493700A7C51A /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50358272353493700A7C51A /* PersistenceTests.swift */; };
 		B503582A2353493700A7C51A /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = B503581C2353493700A7C51A /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B50358352353497D00A7C51A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50358342353497D00A7C51A /* Post.swift */; };
 		B50358372353498300A7C51A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50358362353498300A7C51A /* User.swift */; };
@@ -19,6 +19,10 @@
 		B593D5F62357ADC800B4D87E /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D5F52357ADC800B4D87E /* UITableView+Utils.swift */; };
 		B593D5FB2357B32E00B4D87E /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D5FA2357B32E00B4D87E /* UIView+Utils.swift */; };
 		B593D606235B500A00B4D87E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D605235B500A00B4D87E /* Localizable.swift */; };
+		B5FA299B235F6E6400FDAC7B /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA299A235F6E6400FDAC7B /* MemoryStorage.swift */; };
+		B5FA29C7235FBD6700FDAC7B /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA29C6235FBD6700FDAC7B /* Dispatcher.swift */; };
+		B5FA29C9235FBD8000FDAC7B /* StorageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA29C8235FBD8000FDAC7B /* StorageResult.swift */; };
+		B5FA29CB235FBDB000FDAC7B /* StorageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA29CA235FBDB000FDAC7B /* StorageError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 		B503581C2353493700A7C51A /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		B503581D2353493700A7C51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B50358222353493700A7C51A /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B50358272353493700A7C51A /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
+		B50358272353493700A7C51A /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTests.swift; sourceTree = "<group>"; };
 		B50358292353493700A7C51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B50358342353497D00A7C51A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B50358362353498300A7C51A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		B593D5F52357ADC800B4D87E /* UITableView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
 		B593D5FA2357B32E00B4D87E /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		B593D605235B500A00B4D87E /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		B5FA299A235F6E6400FDAC7B /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
+		B5FA29C6235FBD6700FDAC7B /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
+		B5FA29C8235FBD8000FDAC7B /* StorageResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageResult.swift; sourceTree = "<group>"; };
+		B5FA29CA235FBDB000FDAC7B /* StorageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +79,8 @@
 		B503580F2353493700A7C51A = {
 			isa = PBXGroup;
 			children = (
-				B50358332353495000A7C51A /* Sources */,
 				B503581B2353493700A7C51A /* SupportingFiles */,
+				B50358332353495000A7C51A /* Sources */,
 				B50358262353493700A7C51A /* Tests */,
 				B503581A2353493700A7C51A /* Products */,
 			);
@@ -99,8 +107,8 @@
 		B50358262353493700A7C51A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				B50358272353493700A7C51A /* CoreTests.swift */,
-				B50358292353493700A7C51A /* Info.plist */,
+				B5FA29D3235FC0F500FDAC7B /* SupportingFiles */,
+				B50358272353493700A7C51A /* PersistenceTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -110,9 +118,9 @@
 			children = (
 				B50E059F235E62B800405523 /* Persistence */,
 				B593D604235B4FFA00B4D87E /* Localizable */,
+				B593D5AD23579DEB00B4D87E /* Coordinator */,
 				B593D5F92357B32300B4D87E /* UIView+Utils */,
 				B593D5F42357ADB500B4D87E /* UITableView+Utils */,
-				B593D5AD23579DEB00B4D87E /* Coordinator */,
 				B593D5AC23579DE200B4D87E /* Models */,
 			);
 			path = Sources;
@@ -123,6 +131,10 @@
 			children = (
 				B50E05A6235E62F000405523 /* Storage.swift */,
 				B50E05A7235E62F000405523 /* FileStorage.swift */,
+				B5FA299A235F6E6400FDAC7B /* MemoryStorage.swift */,
+				B5FA29C6235FBD6700FDAC7B /* Dispatcher.swift */,
+				B5FA29C8235FBD8000FDAC7B /* StorageResult.swift */,
+				B5FA29CA235FBDB000FDAC7B /* StorageError.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -169,6 +181,14 @@
 			path = Localizable;
 			sourceTree = "<group>";
 		};
+		B5FA29D3235FC0F500FDAC7B /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B50358292353493700A7C51A /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -191,6 +211,7 @@
 				B50358152353493700A7C51A /* Sources */,
 				B50358162353493700A7C51A /* Frameworks */,
 				B50358172353493700A7C51A /* Resources */,
+				B5FA29E8235FC35C00FDAC7B /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -274,6 +295,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B5FA29E8235FC35C00FDAC7B /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -z \"$CI\" ]; then\n    ${PROJECT_DIR}/../SwiftLint/swiftlint lint --path ${PROJECT_DIR}/Sources --config ../../SwiftLint/swiftlint.yml --reporter xcode\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B50358152353493700A7C51A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -281,10 +323,14 @@
 			files = (
 				B593D5AF23579DF600B4D87E /* Coordinator.swift in Sources */,
 				B593D606235B500A00B4D87E /* Localizable.swift in Sources */,
+				B5FA29CB235FBDB000FDAC7B /* StorageError.swift in Sources */,
+				B5FA29C9235FBD8000FDAC7B /* StorageResult.swift in Sources */,
 				B50E05A9235E62F000405523 /* FileStorage.swift in Sources */,
 				B50358372353498300A7C51A /* User.swift in Sources */,
+				B5FA299B235F6E6400FDAC7B /* MemoryStorage.swift in Sources */,
 				B50358392353498A00A7C51A /* Comment.swift in Sources */,
 				B50358352353497D00A7C51A /* Post.swift in Sources */,
+				B5FA29C7235FBD6700FDAC7B /* Dispatcher.swift in Sources */,
 				B50E05A8235E62F000405523 /* Storage.swift in Sources */,
 				B593D5FB2357B32E00B4D87E /* UIView+Utils.swift in Sources */,
 				B593D5F62357ADC800B4D87E /* UITableView+Utils.swift in Sources */,
@@ -295,7 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B50358282353493700A7C51A /* CoreTests.swift in Sources */,
+				B50358282353493700A7C51A /* PersistenceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +533,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MS48YPHB8N;
-				INFOPLIST_FILE = CoreTests/Info.plist;
+				INFOPLIST_FILE = Tests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,7 +552,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MS48YPHB8N;
-				INFOPLIST_FILE = CoreTests/Info.plist;
+				INFOPLIST_FILE = Tests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

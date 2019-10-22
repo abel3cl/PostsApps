@@ -38,9 +38,9 @@ public struct HTTPRequest {
     }
 
     public func with(headers: [String: String]? = nil,
-              body: Data? = nil,
-              pathComponents: [String]? = nil,
-              queryParams: [String: String]? = nil) -> HTTPRequest {
+                     body: Data? = nil,
+                     pathComponents: [String]? = nil,
+                     queryParams: [String: String]? = nil) -> HTTPRequest {
         return HTTPRequest(url: self.url,
                            method: self.method,
                            headers: self.headers + headers,

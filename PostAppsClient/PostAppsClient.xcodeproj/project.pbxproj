@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B503586823565E8A00A7C51A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503586723565E8A00A7C51A /* AppDelegate.swift */; };
-		B503586F23565E8A00A7C51A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B503586D23565E8A00A7C51A /* Main.storyboard */; };
 		B503587423565E8D00A7C51A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B503587323565E8D00A7C51A /* Assets.xcassets */; };
 		B503587723565E8D00A7C51A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B503587523565E8D00A7C51A /* LaunchScreen.storyboard */; };
-		B503588223565E8D00A7C51A /* PostAppsClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503588123565E8D00A7C51A /* PostAppsClientTests.swift */; };
 		B503588D23565E8D00A7C51A /* PostAppsClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503588C23565E8D00A7C51A /* PostAppsClientUITests.swift */; };
 		B50358A52356698900A7C51A /* HTTPDebugExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50358A42356698900A7C51A /* HTTPDebugExecutor.swift */; };
 		B593D5652356857800B4D87E /* Adapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B593D5642356857800B4D87E /* Adapter.framework */; };
@@ -20,6 +18,8 @@
 		B593D5D623579EF000B4D87E /* PostFeature.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B593D5D423579EF000B4D87E /* PostFeature.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5FA2989235E904D00FDAC7B /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FA2988235E904D00FDAC7B /* Networking.framework */; };
 		B5FA298A235E904D00FDAC7B /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5FA2988235E904D00FDAC7B /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5FA29CD235FBF3400FDAC7B /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B503589F23565EC300A7C51A /* Core.framework */; };
+		B5FA29CE235FBF3400FDAC7B /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B503589F23565EC300A7C51A /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +49,7 @@
 				B593D5662356857800B4D87E /* Adapter.framework in Embed Frameworks */,
 				B593D5D623579EF000B4D87E /* PostFeature.framework in Embed Frameworks */,
 				B5FA298A235E904D00FDAC7B /* Networking.framework in Embed Frameworks */,
+				B5FA29CE235FBF3400FDAC7B /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,13 +59,10 @@
 /* Begin PBXFileReference section */
 		B503586423565E8A00A7C51A /* PostAppsClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostAppsClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B503586723565E8A00A7C51A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B503586E23565E8A00A7C51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B503587323565E8D00A7C51A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B503587623565E8D00A7C51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B503587823565E8D00A7C51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B503587D23565E8D00A7C51A /* PostAppsClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostAppsClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B503588123565E8D00A7C51A /* PostAppsClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAppsClientTests.swift; sourceTree = "<group>"; };
-		B503588323565E8D00A7C51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B503588823565E8D00A7C51A /* PostAppsClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostAppsClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B503588C23565E8D00A7C51A /* PostAppsClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAppsClientUITests.swift; sourceTree = "<group>"; };
 		B503588E23565E8D00A7C51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +83,7 @@
 				B593D5652356857800B4D87E /* Adapter.framework in Frameworks */,
 				B593D5D523579EF000B4D87E /* PostFeature.framework in Frameworks */,
 				B5FA2989235E904D00FDAC7B /* Networking.framework in Frameworks */,
+				B5FA29CD235FBF3400FDAC7B /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				B503586623565E8A00A7C51A /* PostAppsClient */,
-				B503588023565E8D00A7C51A /* PostAppsClientTests */,
 				B503588B23565E8D00A7C51A /* PostAppsClientUITests */,
 				B503586523565E8A00A7C51A /* Products */,
 				B503589A23565EBF00A7C51A /* Frameworks */,
@@ -130,23 +128,12 @@
 			isa = PBXGroup;
 			children = (
 				B503586723565E8A00A7C51A /* AppDelegate.swift */,
-				B503586D23565E8A00A7C51A /* Main.storyboard */,
 				B503587323565E8D00A7C51A /* Assets.xcassets */,
 				B503587523565E8D00A7C51A /* LaunchScreen.storyboard */,
-				B503587823565E8D00A7C51A /* Info.plist */,
-				B50358A22356683F00A7C51A /* InfoDebug.plist */,
+				B5FA29CC235FBEBB00FDAC7B /* SupportingFiles */,
 				B50358A42356698900A7C51A /* HTTPDebugExecutor.swift */,
 			);
 			path = PostAppsClient;
-			sourceTree = "<group>";
-		};
-		B503588023565E8D00A7C51A /* PostAppsClientTests */ = {
-			isa = PBXGroup;
-			children = (
-				B503588123565E8D00A7C51A /* PostAppsClientTests.swift */,
-				B503588323565E8D00A7C51A /* Info.plist */,
-			);
-			path = PostAppsClientTests;
 			sourceTree = "<group>";
 		};
 		B503588B23565E8D00A7C51A /* PostAppsClientUITests */ = {
@@ -168,6 +155,15 @@
 				B503589B23565EBF00A7C51A /* Networking.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5FA29CC235FBEBB00FDAC7B /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B503587823565E8D00A7C51A /* Info.plist */,
+				B50358A22356683F00A7C51A /* InfoDebug.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +273,6 @@
 			files = (
 				B503587723565E8D00A7C51A /* LaunchScreen.storyboard in Resources */,
 				B503587423565E8D00A7C51A /* Assets.xcassets in Resources */,
-				B503586F23565E8A00A7C51A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +306,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B503588223565E8D00A7C51A /* PostAppsClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,14 +333,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B503586D23565E8A00A7C51A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B503586E23565E8A00A7C51A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B503587523565E8D00A7C51A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -478,7 +464,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MS48YPHB8N;
-				INFOPLIST_FILE = PostAppsClient/InfoDebug.plist;
+				INFOPLIST_FILE = PostAppsClient/SupportingFiles/InfoDebug.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -497,7 +483,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MS48YPHB8N;
-				INFOPLIST_FILE = PostAppsClient/Info.plist;
+				INFOPLIST_FILE = PostAppsClient/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

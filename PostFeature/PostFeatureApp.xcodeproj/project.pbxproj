@@ -382,6 +382,7 @@
 				B593D56D23579D2000B4D87E /* Frameworks */,
 				B593D56E23579D2000B4D87E /* Resources */,
 				B593D5AB23579D5F00B4D87E /* Embed Frameworks */,
+				B5FA299D235F777C00FDAC7B /* Sign Frameworks */,
 			);
 			buildRules = (
 			);
@@ -552,7 +553,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -z \"$CI\" ]; then\n${SRCROOT}/../SwiftLint/swiftlint lint --path ${SRCROOT}/PostFeature/Sources --config ../../../SwiftLint/swiftlint.yml --reporter xcode\nfi\n";
+			shellScript = "if [ -z \"$CI\" ]; then\n    ${PROJECT_DIR}/../SwiftLint/swiftlint lint --path ${PROJECT_DIR} --config ../SwiftLint/swiftlint.yml --reporter xcode\nfi\n\n";
+		};
+		B5FA299D235F777C00FDAC7B /* Sign Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Sign Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ ${PLATFORM_NAME} != \"iphonesimulator\" ]\n    then\n    for f in $(find $CODESIGNING_FOLDER_PATH -name '*.framework')\n        do\n            codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" --preserve-metadata=identifier,entitlements --timestamp=none \"$f\"\n        done    \nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

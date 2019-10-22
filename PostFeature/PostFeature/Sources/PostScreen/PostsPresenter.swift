@@ -35,6 +35,7 @@ final class PostsPresenter {
         case .success(let posts):
             self.posts = posts
             storage.save(models: posts)
+            view?.offlineLabel(isHidden: true)
             view?.reloadData()
         case .failure(.noConection),
              .failure(.timeOut):
@@ -43,7 +44,8 @@ final class PostsPresenter {
             view?.reloadData()
             if let date = persisted.date {
                 let formatter = DateFormatter()
-                formatter.dateStyle = .full
+                formatter.timeStyle = .short
+                formatter.dateStyle = .medium
 
                 let title = String(format: localizer.localize(key: .dataFrom),
                                    formatter.string(from: date))
