@@ -23,7 +23,7 @@ final class DetailsViewController: UIViewController {
     @IBOutlet private weak var emailTitleLabel: UILabel!
     @IBOutlet private weak var emailValueLabel: UILabel!
     @IBOutlet private weak var numberOfCommentsLabel: UILabel!
-    
+
     private let presenter: DetailsPresenterProtocol
 
     init(presenter: DetailsPresenterProtocol) {
@@ -77,7 +77,6 @@ extension DetailsViewController: DetailsView {
     func reloadData() {
 
     }
-    
     func showError() {
 
     }

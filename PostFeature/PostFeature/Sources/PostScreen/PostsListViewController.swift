@@ -27,9 +27,6 @@ final class PostsListViewController: UIViewController {
 
     override func loadView() {
         super.loadView()
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        self.offlineMessageLabel = label
 
         let tableView = UITableView(frame: view.bounds)
         let refreshControl = UIRefreshControl()
@@ -42,22 +39,7 @@ final class PostsListViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
 
         self.tableView = tableView
-
-        view.addSubviewFillingParent(label)
         view.addSubviewFillingParent(tableView)
-
-        NSLayoutConstraint.activate(
-            [
-                label.topAnchor.constraint(equalTo: view.topAnchor),
-                label.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                label.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-
-                label.bottomAnchor.constraint(equalTo: tableView.topAnchor),
-                tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-            ]
-        )
     }
 
     override func viewDidLoad() {
@@ -74,7 +56,7 @@ final class PostsListViewController: UIViewController {
 extension PostsListViewController: PostsListView {
     func isLoading(_ loading: Bool) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = loading
-        tableView?.isHidden = !loading
+        tableView?.isHidden = loading
         if !loading {
             tableView?.refreshControl?.endRefreshing()
         }
@@ -86,10 +68,16 @@ extension PostsListViewController: PostsListView {
         tableView?.reloadData()
     }
     func offlineLabel(title: String) {
-        offlineMessageLabel?.text = title
+        let label = UILabel()
+        label.textAlignment = .center
+        label.backgroundColor = .systemPink
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = title
+        tableView?.tableHeaderView = label
+        label.sizeToFit()
     }
     func offlineLabel(isHidden: Bool) {
-        offlineMessageLabel?.isHidden = isHidden
+        tableView?.tableHeaderView?.isHidden = isHidden
     }
     func showError() {
 

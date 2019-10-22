@@ -4,7 +4,7 @@ import Adapter
 protocol DetailsPresenterProtocol {
     func viewDidLoad()
     func viewDidAppear()
-    func attachView(_ view: DetailsView)    
+    func attachView(_ view: DetailsView)
 }
 
 final class DetailsPresenter {
@@ -50,7 +50,6 @@ final class DetailsPresenter {
 
             view?.set(numberOfCommentsIsHidden: false)
             view?.set(numberOfComments: numberOfComments)
-            break
         case .failure(.noConection):
             errorMessage = localizer.localize(key: .errorNoConnection)
             fallthrough

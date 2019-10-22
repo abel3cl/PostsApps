@@ -11,13 +11,13 @@ protocol PostsPresenterProtocol {
 }
 
 final class PostsPresenter {
-    weak var view: PostsListView?
-    var posts: [Post] = []
+    private weak var view: PostsListView?
+    private var posts: [Post] = []
 
-    let coordinator: PostCoordinator
-    let storage: AnyStorage<Post>
-    let adapter: PostAdapterList
-    let localizer: PostLocalizer
+    private let coordinator: PostCoordinator
+    private let storage: AnyStorage<Post>
+    private let adapter: PostAdapterList
+    private let localizer: PostLocalizer
 
     init(coordinator: PostCoordinator,
          storage: AnyStorage<Post>,
@@ -36,18 +36,22 @@ final class PostsPresenter {
             self.posts = posts
             storage.save(models: posts)
             view?.reloadData()
-        case .failure(.noConection):
+        case .failure(.noConection),
+             .failure(.timeOut):
             let persisted = loadFromStorage()
             self.posts = persisted.posts
+            view?.reloadData()
             if let date = persisted.date {
-                let df = DateFormatter()
-                df.dateStyle = .medium
-                view?.offlineLabel(title: df.string(from: date))
+                let formatter = DateFormatter()
+                formatter.dateStyle = .full
+
+                let title = String(format: localizer.localize(key: .dataFrom),
+                                   formatter.string(from: date))
+                view?.offlineLabel(title: title)
                 view?.offlineLabel(isHidden: false)
             }
         case .failure:
             view?.showError()
-            break
         }
     }
 

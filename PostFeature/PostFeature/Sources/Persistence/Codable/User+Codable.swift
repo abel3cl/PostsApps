@@ -21,7 +21,7 @@ extension User: Codable {
         let phone = try container.decode(String.self, forKey: .phone)
         let website = try container.decode(String.self, forKey: .website)
         let company = try container.decode(Company.self, forKey: .company)
-        
+
         self.init(id: id, name: name, username: username, email: email,
                   address: address, phone: phone, website: website, company: company)
     }
@@ -53,7 +53,7 @@ extension User.Address: Codable {
         let city = try container.decode(String.self, forKey: .city)
         let zipcode = try container.decode(String.self, forKey: .zipcode)
         let geo = try container.decode(Geo.self, forKey: .geo)
-        self.init(street: street, suite: suite, city: city, zipcode: zipcode,  geo: geo)
+        self.init(street: street, suite: suite, city: city, zipcode: zipcode, geo: geo)
     }
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)

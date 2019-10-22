@@ -14,8 +14,7 @@ extension Post: Codable {
         let id = try container.decode(Int.self, forKey: .id)
         let title = try container.decode(String.self, forKey: .title)
         let body = try container.decode(String.self, forKey: .body)
-        let comments = try container.decode([Comment].self, forKey: .comments)
-        self.init(userId: userId, id: id, title: title, body: body, comments: comments)
+        self.init(userId: userId, id: id, title: title, body: body)
     }
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
@@ -23,6 +22,5 @@ extension Post: Codable {
         try container.encode(id, forKey: .id)
         try container.encode(title, forKey: .title)
         try container.encode(body, forKey: .body)
-        try container.encode(comments, forKey: .comments)
     }
 }

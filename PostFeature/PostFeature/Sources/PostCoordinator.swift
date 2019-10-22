@@ -1,7 +1,11 @@
 import UIKit
 import Core
 
-struct PostCoordinator: Coordinator {
+protocol PostCoordinator: Coordinator {
+    func toDetails(post: Post)
+}
+
+struct PostCoordinatorFeature: PostCoordinator {
     let nav: UINavigationController
     let presenterFactory: PostPresenterFactory
 
@@ -16,7 +20,7 @@ struct PostCoordinator: Coordinator {
         nav.setViewControllers([postsViewController], animated: true)
     }
     func toDetails(post: Post) {
-        let presenter = presenterFactory.getDetailsPresenter(post:post, coordinator: self)
+        let presenter = presenterFactory.getDetailsPresenter(post: post, coordinator: self)
         let detailsViewController = DetailsViewController(presenter: presenter)
         nav.pushViewController(detailsViewController, animated: true)
     }

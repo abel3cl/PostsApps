@@ -47,9 +47,15 @@ struct HTTPCommand<Decode, Map> where Decode: Decodable {
     }
 
     func transformError(originalError: Error) -> AdapterError {
-        if let urlError = originalError as? URLError,
-            urlError.code == URLError.Code.cannotConnectToHost {
+        if let urlError = originalError as? URLError {
+            if urlError.code == URLError.Code.cannotConnectToHost
+                || urlError.code == URLError.Code.notConnectedToInternet {
             return .noConection
+            }
+            if urlError.code == URLError.Code.timedOut {
+                return .timeOut
+            }
+            return .original(error: originalError)
         }
         return .original(error: originalError)
     }

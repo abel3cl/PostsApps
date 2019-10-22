@@ -1,7 +1,13 @@
 import Foundation
 import Networking
 
-public struct PostAdapter {
+public protocol PostAdapter {
+    var post: PostAdapterList { get }
+    var user: PostAdapterUser { get }
+    var comment: PostAdapterComment { get }
+}
+
+public struct PostAdapterImpl: PostAdapter {
     public var post: PostAdapterList
     public var user: PostAdapterUser
     public var comment: PostAdapterComment

@@ -11,7 +11,6 @@ struct PostPresenterFactory {
 
     func getDetailsPresenter(post: Post,
                              coordinator: PostCoordinator) -> DetailsPresenterProtocol {
-        guard let fileStorage = FileStorage<Post>() else { fatalError() }
 
         return DetailsPresenter(post: post,
                                 coordinator: coordinator,

@@ -5,8 +5,7 @@ extension Post {
         self.init(userId: response.userId,
                   id: response.id,
                   title: response.title,
-                  body: response.body,
-                  comments: [])
+                  body: response.body)
 
     }
 }

@@ -3,7 +3,7 @@ import Core
 final class DetailsLocalizer: Localizable {
     let tableName = "LocalizableDetailsScreen"
 
-    enum LocalizableKey: String  {
+    enum LocalizableKey: String {
         case title = "details.title"
         case author = "details.author"
         case email = "details.email"

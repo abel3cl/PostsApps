@@ -8,7 +8,7 @@ import Networking
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     #if DEBUG
-    let adapter = PostAdapter(context: .init(baseUrl: "https://jsonplaceholder.typicode.com"),
+    let adapter = PostAdapterImpl(context: .init(baseUrl: "https://jsonplaceholder.typicode.com"),
                               client: .init(executor: HTTPClientDebugExecutor(wrapping: HTTPClientExecutor())))
     #else
     let adapter = PostAdapter(context: .init(baseUrl: "https://jsonplaceholder.typicode.com"),

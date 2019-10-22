@@ -32,16 +32,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B593D58523579D2100B4D87E"
-               BuildableName = "PostFeatureAppTests.xctest"
-               BlueprintName = "PostFeatureAppTests"
-               ReferencedContainer = "container:PostFeatureApp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "B593D59023579D2100B4D87E"
                BuildableName = "PostFeatureAppUITests.xctest"
                BlueprintName = "PostFeatureAppUITests"

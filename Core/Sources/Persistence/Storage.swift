@@ -18,7 +18,9 @@ public final class AnyStorage<StorableType: Codable>: Storage {
     }
 
     public func save(models: [StorableType]) {
-        _save(models)
+        DispatchQueue.global().async { [weak self] in
+            self?._save(models)
+        }
     }
 
     public func get() -> StorageResult<[StorableType], StorageError> {

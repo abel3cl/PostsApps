@@ -7,7 +7,7 @@ import PostFeature
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let adapter = PostAdapter(context: .init(baseUrl: "https://jsonplaceholder.typicode.com"),
+    let adapter: PostAdapter = PostAdapterImpl(context: .init(baseUrl: "https://jsonplaceholder.typicode.com"),
                               client: .init(executor: HTTPClientExecutor()))
     var postManager: PostManager?
 

@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B503586823565E8A00A7C51A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503586723565E8A00A7C51A /* AppDelegate.swift */; };
-		B503586C23565E8A00A7C51A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503586B23565E8A00A7C51A /* ViewController.swift */; };
 		B503586F23565E8A00A7C51A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B503586D23565E8A00A7C51A /* Main.storyboard */; };
-		B503587223565E8A00A7C51A /* PostAppsClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B503587023565E8A00A7C51A /* PostAppsClient.xcdatamodeld */; };
 		B503587423565E8D00A7C51A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B503587323565E8D00A7C51A /* Assets.xcassets */; };
 		B503587723565E8D00A7C51A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B503587523565E8D00A7C51A /* LaunchScreen.storyboard */; };
 		B503588223565E8D00A7C51A /* PostAppsClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503588123565E8D00A7C51A /* PostAppsClientTests.swift */; };
@@ -20,6 +18,8 @@
 		B593D5662356857800B4D87E /* Adapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B593D5642356857800B4D87E /* Adapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B593D5D523579EF000B4D87E /* PostFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B593D5D423579EF000B4D87E /* PostFeature.framework */; };
 		B593D5D623579EF000B4D87E /* PostFeature.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B593D5D423579EF000B4D87E /* PostFeature.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5FA2989235E904D00FDAC7B /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FA2988235E904D00FDAC7B /* Networking.framework */; };
+		B5FA298A235E904D00FDAC7B /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5FA2988235E904D00FDAC7B /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +48,7 @@
 			files = (
 				B593D5662356857800B4D87E /* Adapter.framework in Embed Frameworks */,
 				B593D5D623579EF000B4D87E /* PostFeature.framework in Embed Frameworks */,
+				B5FA298A235E904D00FDAC7B /* Networking.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,9 +58,7 @@
 /* Begin PBXFileReference section */
 		B503586423565E8A00A7C51A /* PostAppsClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostAppsClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B503586723565E8A00A7C51A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B503586B23565E8A00A7C51A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B503586E23565E8A00A7C51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B503587123565E8A00A7C51A /* PostAppsClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PostAppsClient.xcdatamodel; sourceTree = "<group>"; };
 		B503587323565E8D00A7C51A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B503587623565E8D00A7C51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B503587823565E8D00A7C51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		B50358A42356698900A7C51A /* HTTPDebugExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDebugExecutor.swift; sourceTree = "<group>"; };
 		B593D5642356857800B4D87E /* Adapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Adapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B593D5D423579EF000B4D87E /* PostFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PostFeature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5FA2988235E904D00FDAC7B /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +84,7 @@
 			files = (
 				B593D5652356857800B4D87E /* Adapter.framework in Frameworks */,
 				B593D5D523579EF000B4D87E /* PostFeature.framework in Frameworks */,
+				B5FA2989235E904D00FDAC7B /* Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,13 +130,11 @@
 			isa = PBXGroup;
 			children = (
 				B503586723565E8A00A7C51A /* AppDelegate.swift */,
-				B503586B23565E8A00A7C51A /* ViewController.swift */,
 				B503586D23565E8A00A7C51A /* Main.storyboard */,
 				B503587323565E8D00A7C51A /* Assets.xcassets */,
 				B503587523565E8D00A7C51A /* LaunchScreen.storyboard */,
 				B503587823565E8D00A7C51A /* Info.plist */,
 				B50358A22356683F00A7C51A /* InfoDebug.plist */,
-				B503587023565E8A00A7C51A /* PostAppsClient.xcdatamodeld */,
 				B50358A42356698900A7C51A /* HTTPDebugExecutor.swift */,
 			);
 			path = PostAppsClient;
@@ -162,6 +161,7 @@
 		B503589A23565EBF00A7C51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5FA2988235E904D00FDAC7B /* Networking.framework */,
 				B593D5D423579EF000B4D87E /* PostFeature.framework */,
 				B593D5642356857800B4D87E /* Adapter.framework */,
 				B503589F23565EC300A7C51A /* Core.framework */,
@@ -302,8 +302,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B503587223565E8A00A7C51A /* PostAppsClient.xcdatamodeld in Sources */,
-				B503586C23565E8A00A7C51A /* ViewController.swift in Sources */,
 				B50358A52356698900A7C51A /* HTTPDebugExecutor.swift in Sources */,
 				B503586823565E8A00A7C51A /* AppDelegate.swift in Sources */,
 			);
@@ -636,19 +634,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		B503587023565E8A00A7C51A /* PostAppsClient.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B503587123565E8A00A7C51A /* PostAppsClient.xcdatamodel */,
-			);
-			currentVersion = B503587123565E8A00A7C51A /* PostAppsClient.xcdatamodel */;
-			path = PostAppsClient.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = B503585C23565E8A00A7C51A /* Project object */;
 }
