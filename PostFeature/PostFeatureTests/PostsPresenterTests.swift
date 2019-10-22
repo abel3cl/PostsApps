@@ -67,7 +67,7 @@ final class PostsPresenterTests: XCTestCase {
 
         let formatter = DateFormatter()
         formatter.timeStyle = .short
-        formatter.dateStyle = .full
+        formatter.dateStyle = .medium
 
         XCTAssertEqual(view.reloadDataCount, 1)
         XCTAssertEqual(view.viewTitle, "List of Posts")

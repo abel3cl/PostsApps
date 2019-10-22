@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B593D5B623579E9C00B4D87E"
-               BuildableName = "PostFeature.framework"
-               BlueprintName = "PostFeature"
-               ReferencedContainer = "container:PostFeatureApp.xcodeproj">
+               BlueprintIdentifier = "B50358182353493700A7C51A"
+               BuildableName = "Core.framework"
+               BlueprintName = "Core"
+               ReferencedContainer = "container:Core.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,24 +28,15 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
-      <CodeCoverageTargets>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B593D5B623579E9C00B4D87E"
-            BuildableName = "PostFeature.framework"
-            BlueprintName = "PostFeature"
-            ReferencedContainer = "container:PostFeatureApp.xcodeproj">
-         </BuildableReference>
-      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B593D5BE23579E9C00B4D87E"
-               BuildableName = "PostFeatureTests.xctest"
-               BlueprintName = "PostFeatureTests"
-               ReferencedContainer = "container:PostFeatureApp.xcodeproj">
+               BlueprintIdentifier = "B50358212353493700A7C51A"
+               BuildableName = "CoreTests.xctest"
+               BlueprintName = "CoreTests"
+               ReferencedContainer = "container:Core.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -70,10 +61,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B593D5B623579E9C00B4D87E"
-            BuildableName = "PostFeature.framework"
-            BlueprintName = "PostFeature"
-            ReferencedContainer = "container:PostFeatureApp.xcodeproj">
+            BlueprintIdentifier = "B50358182353493700A7C51A"
+            BuildableName = "Core.framework"
+            BlueprintName = "Core"
+            ReferencedContainer = "container:Core.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
