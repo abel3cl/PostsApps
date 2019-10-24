@@ -47,11 +47,28 @@ final class PostsPresenterTests: XCTestCase {
 
         presenter.viewDidLoad()
 
-        XCTAssertEqual(view.reloadDataCount, 1)
         XCTAssertEqual(view.viewTitle, "List of Posts")
         XCTAssertEqual(view.reloadDataCount, 1)
         XCTAssertEqual(view.offlineLabelTitle, "")
         XCTAssertEqual(view.offlineLabelIsHidden, true)
+    }
+
+    func test_viewDidLoad_failure_showsError() {
+        let post1 = Post(userId: 1, id: 1, title: "title", body: "body")
+        let date = Date()
+
+        set(storageResult: { .success([post1], date) },
+            response: { .failure(AdapterError.original(error: URLError(URLError.Code.cancelled))) })
+
+        XCTAssertEqual(view.reloadDataCount, 0)
+
+        presenter.viewDidLoad()
+
+        XCTAssertEqual(view.viewTitle, "List of Posts")
+        XCTAssertEqual(view.reloadDataCount, 0)
+        XCTAssertEqual(view.offlineLabelTitle, "")
+        XCTAssertEqual(view.offlineLabelIsHidden, true)
+        XCTAssertNotNil(view.error)
     }
 
     func test_viewDidLoad_failure_loadsFromStorage() {
@@ -69,7 +86,6 @@ final class PostsPresenterTests: XCTestCase {
         formatter.timeStyle = .short
         formatter.dateStyle = .medium
 
-        XCTAssertEqual(view.reloadDataCount, 1)
         XCTAssertEqual(view.viewTitle, "List of Posts")
         XCTAssertEqual(view.reloadDataCount, 1)
         XCTAssertEqual(view.offlineLabelTitle, "Your data is from: \(formatter.string(from: date))")
@@ -88,6 +104,7 @@ final class PostsPresenterTests: XCTestCase {
 
         XCTAssertEqual(cell.title, "title")
         XCTAssertEqual(cell.subtitle, "1")
+        XCTAssertEqual(cell.accessoryType, .disclosureIndicator)
     }
 
     func test_didSelect_pushesController() {
@@ -101,8 +118,23 @@ final class PostsPresenterTests: XCTestCase {
     }
 
     func test_refresh_reloadsData() {
+        let post1 = Post(userId: 1, id: 1, title: "title", body: "body")
+
+        set {
+            .success([post1])
+        }
+        XCTAssertEqual(view.reloadDataCount, 0)
+        XCTAssertEqual(adapter.getPostsCount, 0)
+
+        presenter.viewDidLoad()
+
+        XCTAssertEqual(view.reloadDataCount, 1)
+        XCTAssertEqual(adapter.getPostsCount, 1)
+
         presenter.refresh()
 
+        XCTAssertEqual(view.reloadDataCount, 2)
+        XCTAssertEqual(adapter.getPostsCount, 2)
     }
 }
 
@@ -112,19 +144,23 @@ private class PostsListViewMock: PostsListView {
     var reloadDataCount = 0
     var offlineLabelTitle: String?
     var offlineLabelIsHidden: Bool?
+    var error: Error?
 
     func isLoading(_ loading: Bool) { self.loading = loading }
     func set(title: String) { viewTitle = title }
     func reloadData() { reloadDataCount += 1 }
     func offlineLabel(title: String) { offlineLabelTitle = title }
     func offlineLabel(isHidden: Bool) { offlineLabelIsHidden = isHidden }
-    func showError() { }
+    func showError(_ error: Error) { self.error = error }
 }
 
 private class PostCellMock: PostCell {
+
     var title: String?
     var subtitle: String?
+    var accessoryType: UITableViewCell.AccessoryType?
 
     func set(title: String) { self.title = title }
     func set(subtitle: String) { self.subtitle = subtitle }
+    func set(accessoryType: UITableViewCell.AccessoryType) { self.accessoryType = accessoryType }
 }

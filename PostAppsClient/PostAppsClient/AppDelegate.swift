@@ -4,7 +4,7 @@ import PostFeature
 import Networking
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     #if DEBUG
     let adapter = PostAdapterImpl(context: .init(baseUrl: "https://jsonplaceholder.typicode.com"),

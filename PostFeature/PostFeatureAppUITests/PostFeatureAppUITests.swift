@@ -1,42 +1,61 @@
-//
-//  PostFeatureAppUITests.swift
-//  PostFeatureAppUITests
-//
-//  Created by Abel Castro on 22/10/2019.
-//
-
 import XCTest
+import Adapter
 
-class PostFeatureAppUITests: XCTestCase {
+@testable import PostFeature
+
+final class PostFeatureAppUITests: PostFeatureAppUIBaseTests {
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+        super.setUp()
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func test_list_success_user_comment_success() {
+        givenTheAppLaunch()
+        givenAPIRetursPosts()
+
+        XCTAssertTrue(app.navigationBars["List of Posts"].exists)
+
+        let cell = app.tables.cells.element(boundBy: 0)
+
+        XCTAssertTrue(cell.waitForExistence(timeout: 2))
+
+        XCTAssertTrue(cell.staticTexts[AccessibilityIds.Post.title].exists)
+        XCTAssertTrue(cell.staticTexts[AccessibilityIds.Post.subtitle].exists)
+
+        whenITapOnFirstCell()
+
+        andAPIRetursUser()
+        andAPIRetursComments()
+
+        XCTAssertTrue(app.navigationBars["Details of Post"].exists)
+
+        XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.authorLabel].exists)
+        XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.authorValue].exists)
+        XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.emailLabel].exists)
+        XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.emailValue].exists)
+        XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.numberOfComments].exists)
+        XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.body].exists)
     }
 
-    func testExample() {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
+    func test_list_success_user_success_comment_failure() {
+        givenTheAppLaunch()
+        givenAPIRetursPosts()
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+        XCTAssertTrue(app.navigationBars["List of Posts"].exists)
 
-    func testLaunchPerformance() {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                XCUIApplication().launch()
-            }
-        }
+        whenITapOnFirstCell()
+
+        andAPIRetursUser()
+        andAPIFailsComments()
+
+        XCTAssertTrue(app.navigationBars["Details of Post"].exists)
+
+        XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.authorLabel].exists)
+        XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.authorValue].exists)
+        XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.emailLabel].exists)
+        XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.emailValue].exists)
+        XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.numberOfComments].exists)
+        XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.body].exists)
     }
 }

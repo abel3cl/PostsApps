@@ -3,9 +3,18 @@ import Adapter
 
 struct PostPresenterFactory {
     let postAdapter: PostAdapter
+
     func getPostsPresenter(coordinator: PostCoordinator) -> PostsPresenterProtocol {
-        guard let fileStorage = FileStorage<Post>() else { fatalError() }
-        let storage = AnyStorage(fileStorage)
+        let storage: AnyStorage<Post>
+
+        if !wasLaunched(with: .uiTest) {
+            guard let fileStorage = FileStorage<Post>() else { fatalError() }
+            storage = AnyStorage(fileStorage)
+        } else {
+            let memoryStorage = MemoryStorage<Post>()
+            storage = AnyStorage(memoryStorage)
+        }
+
         return PostsPresenter(coordinator: coordinator, storage: storage, adapter: postAdapter.post)
     }
 
@@ -18,3 +27,4 @@ struct PostPresenterFactory {
                                 userAdapter: postAdapter.user)
     }
 }
+extension PostPresenterFactory: LaunchArgumentExecutable {}

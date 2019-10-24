@@ -1,10 +1,3 @@
-//
-//  NetworkingTests.swift
-//  NetworkingTests
-//
-//  Created by Abel Castro on 13/10/2019.
-//
-
 import XCTest
 @testable import Networking
 

@@ -1,10 +1,3 @@
-//
-//  PostFeature.h
-//  PostFeature
-//
-//  Created by Abel Castro on 16/10/2019.
-//
-
 #import <Foundation/Foundation.h>
 
 //! Project version number for PostFeature.

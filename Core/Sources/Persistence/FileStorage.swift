@@ -16,11 +16,9 @@ public final class FileStorage<StorableType: Codable>: Storage {
         let path = documents?.path ?? ""
 
         if !FileManager.default.fileExists(atPath: path) {
-            let result = FileManager.default.createFile(atPath: path,
+            FileManager.default.createFile(atPath: path,
                                            contents: nil,
                                            attributes: [FileAttributeKey.modificationDate: Date()])
-            print("file created")
-            print(result)
         }
 
     }
@@ -32,9 +30,7 @@ public final class FileStorage<StorableType: Codable>: Storage {
             try data.write(to: documents)
             try FileManager.default.setAttributes([FileAttributeKey.modificationDate: Date()], ofItemAtPath: documents.path)
 
-        } catch {
-            print(error)
-        }
+        } catch { }
     }
 
     public func get() -> StorageResult<[StorableType], StorageError> {
@@ -43,7 +39,6 @@ public final class FileStorage<StorableType: Codable>: Storage {
             let data = try Data(contentsOf: documents)
             let models = try JSONDecoder().decode([StorableType].self, from: data)
             let modificationDate = try FileManager.default.attributesOfItem(atPath: documents.path)[FileAttributeKey.modificationDate] as? Date ?? Date()
-            print(modificationDate)
 
             return .success(models, modificationDate)
         } catch {

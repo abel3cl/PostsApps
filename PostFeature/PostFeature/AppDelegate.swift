@@ -4,11 +4,9 @@ import Adapter
 import PostFeature
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let adapter: PostAdapter = PostAdapterImpl(context: .init(baseUrl: "https://jsonplaceholder.typicode.com"),
-                              client: .init(executor: HTTPClientExecutor()))
     var postManager: PostManager?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -28,7 +26,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func initManagers(navigation: UINavigationController) {
+        let url: String
+
+        if !wasLaunched(with: .uiTest) {
+            url = "https://jsonplaceholder.typicode.com"
+        } else { // UITest
+            url = "http://localhost:9080"
+        }
+        let adapter = PostAdapterImpl(context: .init(baseUrl: url),
+                                      client: .init(executor: HTTPClientExecutor()))
+
         postManager = PostManager(nav: navigation, adapter: adapter)
     }
 
 }
+
+extension AppDelegate: LaunchArgumentExecutable {}

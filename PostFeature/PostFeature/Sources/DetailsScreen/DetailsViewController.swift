@@ -12,8 +12,9 @@ protocol DetailsView: AnyObject {
     func set(numberOfComments: String)
     func set(numberOfCommentsIsHidden: Bool)
 
-    func reloadData()
-    func showError()
+    func set(body: String)
+
+    func showError(_ error: Error)
 }
 
 final class DetailsViewController: UIViewController {
@@ -23,6 +24,7 @@ final class DetailsViewController: UIViewController {
     @IBOutlet private weak var emailTitleLabel: UILabel!
     @IBOutlet private weak var emailValueLabel: UILabel!
     @IBOutlet private weak var numberOfCommentsLabel: UILabel!
+    @IBOutlet private weak var bodyTextView: UITextView!
 
     private let presenter: DetailsPresenterProtocol
 
@@ -40,11 +42,17 @@ final class DetailsViewController: UIViewController {
 
         presenter.attachView(self)
         presenter.viewDidLoad()
+        setAccessibility()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        presenter.viewDidAppear()
+    private func setAccessibility() {
+        authorTitleLabel.accessibilityIdentifier = AccessibilityIds.Details.authorLabel
+        authorValueLabel.accessibilityIdentifier = AccessibilityIds.Details.authorValue
+        emailTitleLabel.accessibilityIdentifier = AccessibilityIds.Details.emailLabel
+        emailValueLabel.accessibilityIdentifier = AccessibilityIds.Details.emailValue
+        numberOfCommentsLabel.accessibilityIdentifier = AccessibilityIds.Details.numberOfComments
+        bodyTextView.isAccessibilityElement = true
+        bodyTextView.accessibilityIdentifier = AccessibilityIds.Details.body
     }
 }
 
@@ -74,10 +82,12 @@ extension DetailsViewController: DetailsView {
     func set(numberOfCommentsIsHidden: Bool) {
         numberOfCommentsLabel.isHidden = numberOfCommentsIsHidden
     }
-    func reloadData() {
-
+    func set(body: String) {
+        bodyTextView.text = body
     }
-    func showError() {
-
+    func showError(_ error: Error) {
+        let alert = UIAlertController(title: nil, message: error.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }

@@ -52,8 +52,8 @@ final class PostsPresenter {
                 view?.offlineLabel(title: title)
                 view?.offlineLabel(isHidden: false)
             }
-        case .failure:
-            view?.showError()
+        case .failure(let error):
+            view?.showError(error)
         }
     }
 
@@ -61,7 +61,7 @@ final class PostsPresenter {
         switch storage.get() {
         case .success(let posts, let date):
             return (posts, date)
-        case .failure(let error):
+        case .failure:
             return ([], nil)
         }
     }
@@ -85,6 +85,7 @@ extension PostsPresenter: PostsPresenterProtocol {
         let post = posts[row]
         cell.set(title: post.title)
         cell.set(subtitle: "\(post.id)")
+        cell.set(accessoryType: .disclosureIndicator)
     }
     func didSelect(at row: Int) {
         let post = posts[row]

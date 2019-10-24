@@ -1,0 +1,4 @@
+[submodule "Swifter"]
+	path = Swifter
+	url = https://github.com/httpswift/swifter.git
+	branch = master

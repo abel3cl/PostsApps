@@ -7,7 +7,7 @@ protocol PostsListView: AnyObject {
     func reloadData()
     func offlineLabel(title: String)
     func offlineLabel(isHidden: Bool)
-    func showError()
+    func showError(_ error: Error)
 }
 
 final class PostsListViewController: UIViewController {
@@ -81,8 +81,10 @@ extension PostsListViewController: PostsListView {
     func offlineLabel(isHidden: Bool) {
         tableView?.tableHeaderView?.isHidden = isHidden
     }
-    func showError() {
-
+    func showError(_ error: Error) {
+        let alert = UIAlertController(title: nil, message: error.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -96,6 +98,7 @@ extension PostsListViewController: UITableViewDataSource {
                                                                            reuseIdentifier: PostTableViewCell.id))
 
         presenter.set(cell: cell, at: indexPath.row)
+
         return cell
     }
 }

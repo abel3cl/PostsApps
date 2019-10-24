@@ -16,4 +16,7 @@
    <FileRef
       location = "group:Networking/Networking.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Swifter/XCode/Swifter.xcodeproj">
+   </FileRef>
 </Workspace>

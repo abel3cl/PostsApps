@@ -4,7 +4,7 @@ public final class MemoryStorage<StorableType: Codable>: Storage {
     private var date: Date?
     private var models: [StorableType] = []
 
-    init() {}
+    public init() {}
 
     public func save(models: [StorableType]) {
         self.date = Date()

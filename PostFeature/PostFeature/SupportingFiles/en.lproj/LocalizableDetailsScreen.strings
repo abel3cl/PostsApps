@@ -1,8 +1,8 @@
-"details.title" = "Details of Posts";
+"details.title" = "Details of Post";
 "details.author" = "Author:";
 "details.email" = "Email:";
 "details.loading" = "Loading...";
-"details.numberOfCommentsTitle" = "This post has: %@";
+"details.numberOfCommentsTitle" = "This post has %@";
 
 "error.noConnection" = "You lost your connection. Try again later.";
 "error.default" = "Comments can't load right now";

@@ -3,7 +3,6 @@ import Adapter
 
 protocol DetailsPresenterProtocol {
     func viewDidLoad()
-    func viewDidAppear()
     func attachView(_ view: DetailsView)
 }
 
@@ -33,8 +32,8 @@ final class DetailsPresenter {
         case .success(let user):
             view?.set(authorValue: user.name)
             view?.set(emailValue: user.email)
-        case .failure(let error): break
-
+        case .failure(let error):
+            view?.showError(error)
         }
     }
 
@@ -72,13 +71,12 @@ extension DetailsPresenter: DetailsPresenterProtocol {
         view?.isLoading(true)
         view?.set(authorValue: localizer.localize(key: .loading))
         view?.set(emailValue: localizer.localize(key: .loading))
+        view?.set(body: post.body)
 
         userAdapter.getUserDetails(post: post, completion: handleUserResult)
         commentAdapter.getComments(post: post, completion: handleCommentsResult)
     }
-    func viewDidAppear() {
 
-    }
     func attachView(_ view: DetailsView) {
         self.view = view
     }
