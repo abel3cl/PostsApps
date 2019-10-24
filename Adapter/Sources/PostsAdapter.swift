@@ -12,7 +12,7 @@ public struct PostAdapterImpl: PostAdapter {
     public var user: PostAdapterUser
     public var comment: PostAdapterComment
 
-    public init(context: AdapterContext, client: HTTPClient) {
+    public init(context: AdapterContext, client: HTTPClientProtocol) {
         post = PostAdapterListImpl(context: context, client: client)
         user = PostAdapterUserImpl(context: context, client: client)
         comment = PostAdapterCommentImpl(context: context, client: client)

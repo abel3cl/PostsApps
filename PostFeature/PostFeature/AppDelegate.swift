@@ -34,7 +34,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
             url = "http://localhost:9080"
         }
         let adapter = PostAdapterImpl(context: .init(baseUrl: url),
-                                      client: .init(executor: HTTPClientExecutor()))
+                                      client: HTTPClient(executor: HTTPClientExecutor()))
 
         postManager = PostManager(nav: navigation, adapter: adapter)
     }

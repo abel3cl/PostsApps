@@ -6,12 +6,13 @@ import Networking
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let url = "https://jsonplaceholder.typicode.com"
     #if DEBUG
-    let adapter = PostAdapterImpl(context: .init(baseUrl: "https://jsonplaceholder.typicode.com"),
-                              client: .init(executor: HTTPClientDebugExecutor(wrapping: HTTPClientExecutor())))
+    let adapter = PostAdapterImpl(context: .init(baseUrl: url),
+                              client: HTTPClient(executor: HTTPClientDebugExecutor(wrapping: HTTPClientExecutor())))
     #else
-    let adapter = PostAdapter(context: .init(baseUrl: "https://jsonplaceholder.typicode.com"),
-                              client: .init(executor: HTTPClientExecutor()))
+    let adapter = PostAdapterImpl(context: .init(baseUrl: url),
+                              client: HTTPClient(executor: HTTPClientExecutor()))
     #endif
     var postManager: PostManager?
     
