@@ -1,4 +1,4 @@
-language: swift
+language: objective-c
 cache: bundler
 osx_image: xcode11
 
@@ -10,12 +10,15 @@ branches:
 git:
   depth: 3
 
-jobs:
+before_install:
+  - chmod a+x ./fastlane/*.sh
+  - gem update bundler
+
+script:
+  - "./fastlane/fastlane.sh"
+
+matrix:
   include:
-    - stage: CLIENT_APP_BUILD_TEST
-      env: COMPONENT=CLIENT
-      script:
-        - set -o pipefail
-        - travis_retry xcodebuild test -workspace PostsApp.xcworkspace -scheme PostFeatureApp -destination 'platform=iOS Simulator,name=iPhone 8,OS=13.0' -configuration Debug
-
-
+    - env: CI_DEVICE='iPhone 7'
+    - env: CI_DEVICE='iPhone 6s'
+    - env: CI_DEVICE='iPhone 8'

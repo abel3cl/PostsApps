@@ -1,0 +1,28 @@
+skip_docs
+
+platform :ios do
+  ENV["CI"] = "true"
+  testDevice = ENV["CI_DEVICE"] || "iPhone 8"
+
+  lane :lint do |args|
+    swiftlint(
+      executable: 'SwiftLint/swiftlint',
+      mode: "lint",
+      output_file: 'SwiftLint/swiftlint.txt',
+      config_file: 'SwiftLint/swiftlint.yml',
+      strict: true
+    )
+  end
+
+  lane :feature do  
+    lint
+    scan(
+      skip_build: false,
+      workspace: "PostsApp.xcworkspace",
+      scheme: "PostFeatureApp",
+      device: "#{testDevice}",
+      clean: true
+    )
+  end
+
+end
