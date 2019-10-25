@@ -22,7 +22,7 @@ platform :ios do
       workspace: "PostsApp.xcworkspace",
       scheme: "PostAppsClient-Debug",
       device: "#{testDevice}",
-      clean: true
+      clean: false
     )
   end
 
