@@ -1,4 +1,4 @@
-language: objective-c
+language: swift
 cache: bundler
 osx_image: xcode11
 
@@ -12,8 +12,8 @@ git:
 
 jobs:
   include:
-    - stage: LIBRARY_UNIT_TEST
-      env: COMPONENT=LIBRARY
-      script:
+    - script:
         - set -o pipefail
-        - travis_retry xcodebuild test -project "PostFeature/PostFeatureApp.xcodeproj" -scheme "PostFeatureApp" -destination 'platform=iOS Simulator,name=iPhone X,OS=11.3' -configuration Debug 
+        - travis_retry xcodebuild test -workspace "PostsApp.xcworkspace" -scheme "PostFeatureApp" -destination 'platform=iOS Simulator,name=iPhone 8,OS=13.0' -configuration Debug
+
+
