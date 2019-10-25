@@ -10,7 +10,7 @@ platform :ios do
       mode: "lint",
       output_file: 'SwiftLint/swiftlint.txt',
       config_file: 'SwiftLint/swiftlint.yml',
-      strict: true
+      strict: false
     )
   end
 
