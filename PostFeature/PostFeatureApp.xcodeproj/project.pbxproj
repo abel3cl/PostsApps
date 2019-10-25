@@ -64,16 +64,11 @@
 		B5FA2996235E918D00FDAC7B /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5FA2994235E918D00FDAC7B /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5FA2998235E91AC00FDAC7B /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FA2997235E91AC00FDAC7B /* Networking.framework */; };
 		B5FA2999235E91AC00FDAC7B /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5FA2997235E91AC00FDAC7B /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5FDBE972362928300B303A7 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FDBE962362928300B303A7 /* Core.framework */; };
+		B5FDBE982362928300B303A7 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5FDBE962362928300B303A7 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B526A7CB2360E679001E4ACB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B593D56823579D2000B4D87E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B593D5B623579E9C00B4D87E;
-			remoteInfo = PostFeature;
-		};
 		B526A7CD2360E67D001E4ACB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B593D56823579D2000B4D87E /* Project object */;
@@ -87,13 +82,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = B593D5B623579E9C00B4D87E;
 			remoteInfo = PostFeature;
-		};
-		B593D5C323579E9C00B4D87E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B593D56823579D2000B4D87E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B593D56F23579D2000B4D87E;
-			remoteInfo = PostFeatureApp;
 		};
 		B5FA297D235E8D9500FDAC7B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -114,6 +102,7 @@
 				B5FA2993235E916A00FDAC7B /* Adapter.framework in Embed Frameworks */,
 				B5FA2999235E91AC00FDAC7B /* Networking.framework in Embed Frameworks */,
 				B526A7D02360E69B001E4ACB /* PostFeature.framework in Embed Frameworks */,
+				B5FDBE982362928300B303A7 /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +182,7 @@
 		B5FA2991235E916A00FDAC7B /* Adapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Adapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FA2994235E918D00FDAC7B /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FA2997235E91AC00FDAC7B /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5FDBE962362928300B303A7 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +193,7 @@
 				B5FA2992235E916A00FDAC7B /* Adapter.framework in Frameworks */,
 				B5FA2998235E91AC00FDAC7B /* Networking.framework in Frameworks */,
 				B526A7CF2360E69B001E4ACB /* PostFeature.framework in Frameworks */,
+				B5FDBE972362928300B303A7 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +303,7 @@
 		B593D5A423579D5F00B4D87E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5FDBE962362928300B303A7 /* Core.framework */,
 				B5E4FF3A236186200051144B /* Swifter.framework */,
 				B5FA2997235E91AC00FDAC7B /* Networking.framework */,
 				B5FA2994235E918D00FDAC7B /* Networking.framework */,
@@ -518,7 +510,6 @@
 			);
 			dependencies = (
 				B526A7CE2360E67D001E4ACB /* PBXTargetDependency */,
-				B593D5C423579E9C00B4D87E /* PBXTargetDependency */,
 			);
 			name = PostFeatureTests;
 			productName = PostFeatureTests;
@@ -536,7 +527,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				B526A7CC2360E679001E4ACB /* PBXTargetDependency */,
 				B5FA297E235E8D9500FDAC7B /* PBXTargetDependency */,
 			);
 			name = PostFeatureAppUITests;
@@ -734,11 +724,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B526A7CC2360E679001E4ACB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B593D5B623579E9C00B4D87E /* PostFeature */;
-			targetProxy = B526A7CB2360E679001E4ACB /* PBXContainerItemProxy */;
-		};
 		B526A7CE2360E67D001E4ACB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B593D5B623579E9C00B4D87E /* PostFeature */;
@@ -748,11 +733,6 @@
 			isa = PBXTargetDependency;
 			target = B593D5B623579E9C00B4D87E /* PostFeature */;
 			targetProxy = B526A7D12360E69B001E4ACB /* PBXContainerItemProxy */;
-		};
-		B593D5C423579E9C00B4D87E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B593D56F23579D2000B4D87E /* PostFeatureApp */;
-			targetProxy = B593D5C323579E9C00B4D87E /* PBXContainerItemProxy */;
 		};
 		B5FA297E235E8D9500FDAC7B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
