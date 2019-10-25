@@ -44,10 +44,10 @@ final class PostFeatureAppUITests: PostFeatureAppUIBaseTests {
 
         XCTAssertTrue(app.navigationBars["List of Posts"].exists)
 
-        whenITapOnFirstCell()
-
         andAPIRetursUser()
         andAPIFailsComments()
+
+        whenITapOnFirstCell()
 
         XCTAssertTrue(app.navigationBars["Details of Post"].exists)
 
@@ -57,5 +57,19 @@ final class PostFeatureAppUITests: PostFeatureAppUIBaseTests {
         XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.emailValue].exists)
         XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.numberOfComments].exists)
         XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.body].exists)
+
+        XCTAssertFalse(app.alerts.firstMatch.exists)
+    }
+
+    func test_list_success_user_failure() {
+        givenTheAppLaunch()
+        givenAPIRetursPosts()
+
+        XCTAssertTrue(app.navigationBars["List of Posts"].exists)
+
+        andAPIRetursFailUser()
+        whenITapOnFirstCell()
+
+        XCTAssertTrue(app.alerts.firstMatch.waitForExistence(timeout: 2))
     }
 }

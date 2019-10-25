@@ -25,6 +25,10 @@ extension PostFeatureAppUIBaseTests {
         stubs.setupStub(url: StubUrls.User.get, filename: "user_valid")
     }
 
+    func andAPIRetursFailUser() {
+        stubs.setupStub(url: StubUrls.User.get, statusCode: 500)
+    }
+
     // MARK: When
 
     func whenITapOnFirstCell() {
