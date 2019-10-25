@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		B50358BE23566CF600A7C51A /* Adapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50358B423566CF600A7C51A /* Adapter.framework */; };
 		B50358C523566CF600A7C51A /* Adapter.h in Headers */ = {isa = PBXBuildFile; fileRef = B50358B723566CF600A7C51A /* Adapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B50358D323566DE700A7C51A /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50358D123566DE700A7C51A /* Core.framework */; };
-		B50358D423566DE700A7C51A /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B50358D123566DE700A7C51A /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B54DFC222362E23100E66D5F /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54DFC202362E23100E66D5F /* Core.framework */; };
+		B54DFC232362E23100E66D5F /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B54DFC202362E23100E66D5F /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B54DFC242362E23100E66D5F /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54DFC212362E23100E66D5F /* Networking.framework */; };
+		B54DFC252362E23100E66D5F /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B54DFC212362E23100E66D5F /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B593D55A235680A400B4D87E /* HTTPCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50358D823566EA700A7C51A /* HTTPCommand.swift */; };
 		B593D55B235680A700B4D87E /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50358D923566EA700A7C51A /* Dispatcher.swift */; };
 		B593D5632356828800B4D87E /* PostsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50358CE23566D0A00A7C51A /* PostsAdapter.swift */; };
@@ -40,8 +42,6 @@
 		B5FA29E2235FC27C00FDAC7B /* CommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA29DF235FC27B00FDAC7B /* CommentResponse.swift */; };
 		B5FA29E3235FC27C00FDAC7B /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA29E0235FC27B00FDAC7B /* PostResponse.swift */; };
 		B5FA29E4235FC27C00FDAC7B /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA29E1235FC27C00FDAC7B /* UserResponse.swift */; };
-		B5FA29E6235FC28C00FDAC7B /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FA29E5235FC28C00FDAC7B /* Networking.framework */; };
-		B5FA29E7235FC28C00FDAC7B /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5FA29E5235FC28C00FDAC7B /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5FA29ED235FC8A600FDAC7B /* PostMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA29EC235FC8A600FDAC7B /* PostMapperTests.swift */; };
 		B5FA29EF235FC95500FDAC7B /* CommentMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA29EE235FC95500FDAC7B /* CommentMapperTests.swift */; };
 		B5FA29F1235FC9A600FDAC7B /* UserMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA29F0235FC9A600FDAC7B /* UserMapperTests.swift */; };
@@ -58,14 +58,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B50358D723566DE700A7C51A /* Embed Frameworks */ = {
+		B54DFBD32362DC1A00E66D5F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B5FA29E7235FC28C00FDAC7B /* Networking.framework in Embed Frameworks */,
-				B50358D423566DE700A7C51A /* Core.framework in Embed Frameworks */,
+				B54DFC252362E23100E66D5F /* Networking.framework in Embed Frameworks */,
+				B54DFC232362E23100E66D5F /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,10 +78,10 @@
 		B50358BD23566CF600A7C51A /* AdapterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdapterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50358C423566CF600A7C51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B50358CE23566D0A00A7C51A /* PostsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsAdapter.swift; sourceTree = "<group>"; };
-		B50358D123566DE700A7C51A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B50358D223566DE700A7C51A /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50358D823566EA700A7C51A /* HTTPCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPCommand.swift; sourceTree = "<group>"; };
 		B50358D923566EA700A7C51A /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
+		B54DFC202362E23100E66D5F /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B54DFC212362E23100E66D5F /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B593D618235B55C800B4D87E /* PostAdapterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAdapterList.swift; sourceTree = "<group>"; };
 		B593D61A235B55D200B4D87E /* PostAdapterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAdapterUser.swift; sourceTree = "<group>"; };
 		B593D61D235B560300B4D87E /* PostMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMapper.swift; sourceTree = "<group>"; };
@@ -109,7 +109,6 @@
 		B5FA29DF235FC27B00FDAC7B /* CommentResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentResponse.swift; sourceTree = "<group>"; };
 		B5FA29E0235FC27B00FDAC7B /* PostResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
 		B5FA29E1235FC27C00FDAC7B /* UserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
-		B5FA29E5235FC28C00FDAC7B /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FA29EC235FC8A600FDAC7B /* PostMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMapperTests.swift; sourceTree = "<group>"; };
 		B5FA29EE235FC95500FDAC7B /* CommentMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentMapperTests.swift; sourceTree = "<group>"; };
 		B5FA29F0235FC9A600FDAC7B /* UserMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapperTests.swift; sourceTree = "<group>"; };
@@ -120,8 +119,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5FA29E6235FC28C00FDAC7B /* Networking.framework in Frameworks */,
-				B50358D323566DE700A7C51A /* Core.framework in Frameworks */,
+				B54DFC242362E23100E66D5F /* Networking.framework in Frameworks */,
+				B54DFC222362E23100E66D5F /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,9 +190,8 @@
 		B50358D023566DE700A7C51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B5FA29E5235FC28C00FDAC7B /* Networking.framework */,
-				B50358D123566DE700A7C51A /* Core.framework */,
-				B50358D223566DE700A7C51A /* Networking.framework */,
+				B54DFC202362E23100E66D5F /* Core.framework */,
+				B54DFC212362E23100E66D5F /* Networking.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -340,8 +338,8 @@
 				B50358B023566CF600A7C51A /* Sources */,
 				B50358B123566CF600A7C51A /* Frameworks */,
 				B50358B223566CF600A7C51A /* Resources */,
-				B50358D723566DE700A7C51A /* Embed Frameworks */,
 				B5FA29CF235FBF7800FDAC7B /* SwiftLint */,
+				B54DFBD32362DC1A00E66D5F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
