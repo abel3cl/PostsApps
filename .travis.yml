@@ -12,8 +12,10 @@ git:
 
 jobs:
   include:
-    - script:
+    - stage: CLIENT_APP_BUILD_TEST
+      env: COMPONENT=CLIENT
+      script:
         - set -o pipefail
-        - travis_retry xcodebuild test -workspace "PostsApp.xcworkspace" -scheme "PostFeatureApp" -destination 'platform=iOS Simulator,name=iPhone 8,OS=13.0' -configuration Debug
+        - travis_retry xcodebuild test -workspace PostsApp.xcworkspace -scheme PostFeatureApp -destination 'platform=iOS Simulator,name=iPhone 8,OS=13.0' -configuration Debug
 
 

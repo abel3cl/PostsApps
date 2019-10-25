@@ -3,7 +3,7 @@
 When downloading: 
 
  ```
- git clone --depth=50  https://github.com/abel3cl/PostsApps.git abel3cl/PostsApps
+ git clone https://github.com/abel3cl/PostsApps.git
  git submodule update --init --recursive
  ```
 
