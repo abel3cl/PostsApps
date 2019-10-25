@@ -16,6 +16,6 @@ jobs:
       env: COMPONENT=LIBRARY
       script:
         - set -o pipefail
-        - travis_retry xcodebuild test -workspace PostsApp.xcworkspace -scheme "PostFeatureApp" -destination 'platform=iOS Simulator,name=iPhone X,OS=11.3' -configuration Debug | xcpretty;
+        - travis_retry xcodebuild test -workspace PostsApp.xcworkspace -project "PostFeatureApp" -scheme "PostFeatureApp" -destination 'platform=iOS Simulator,name=iPhone X,OS=11.3' -configuration Debug | xcpretty;
 
 

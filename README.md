@@ -7,6 +7,13 @@ When downloading:
  git submodule update --init --recursive
  ```
 
+ ## Build Status
+
+| Branch | Status |
+| ------------- | ------------- |
+| Master | [![Build Status](https://travis-ci.org/abel3cl/PostsApps.svg?branch=master)](https://travis-ci.org/abel3cl/PostsApps) |
+| Develop | [![Build Status](https://travis-ci.org/abel3cl/PostsApps.svg?branch=develop)](https://travis-ci.org/abel3cl/PostsApps) |
+
 # Targets
 
 PostAppsClient - Debug: Main App running in Debug config (Allows insecure HTTP connections)
