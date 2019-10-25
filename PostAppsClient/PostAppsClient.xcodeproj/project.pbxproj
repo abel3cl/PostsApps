@@ -10,7 +10,6 @@
 		B503586823565E8A00A7C51A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503586723565E8A00A7C51A /* AppDelegate.swift */; };
 		B503587423565E8D00A7C51A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B503587323565E8D00A7C51A /* Assets.xcassets */; };
 		B503587723565E8D00A7C51A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B503587523565E8D00A7C51A /* LaunchScreen.storyboard */; };
-		B503588D23565E8D00A7C51A /* PostAppsClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503588C23565E8D00A7C51A /* PostAppsClientUITests.swift */; };
 		B50358A52356698900A7C51A /* HTTPDebugExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50358A42356698900A7C51A /* HTTPDebugExecutor.swift */; };
 		B593D5652356857800B4D87E /* Adapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B593D5642356857800B4D87E /* Adapter.framework */; };
 		B593D5662356857800B4D87E /* Adapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B593D5642356857800B4D87E /* Adapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -56,7 +55,6 @@
 		B503587623565E8D00A7C51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B503587823565E8D00A7C51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B503588823565E8D00A7C51A /* PostAppsClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostAppsClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B503588C23565E8D00A7C51A /* PostAppsClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAppsClientUITests.swift; sourceTree = "<group>"; };
 		B503588E23565E8D00A7C51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B503589B23565EBF00A7C51A /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B503589F23565EC300A7C51A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,7 +121,6 @@
 		B503588B23565E8D00A7C51A /* PostAppsClientUITests */ = {
 			isa = PBXGroup;
 			children = (
-				B503588C23565E8D00A7C51A /* PostAppsClientUITests.swift */,
 				B503588E23565E8D00A7C51A /* Info.plist */,
 			);
 			path = PostAppsClientUITests;
@@ -282,7 +279,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B503588D23565E8D00A7C51A /* PostAppsClientUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

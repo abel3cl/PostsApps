@@ -32,26 +32,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B503588723565E8D00A7C51A"
-               BuildableName = "PostAppsClientUITests.xctest"
-               BlueprintName = "PostAppsClientUITests"
-               ReferencedContainer = "container:PostAppsClient.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B50358BC23566CF600A7C51A"
-               BuildableName = "AdapterTests.xctest"
-               BlueprintName = "AdapterTests"
-               ReferencedContainer = "container:../Adapter/Adapter.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "B50358212353493700A7C51A"
                BuildableName = "CoreTests.xctest"
                BlueprintName = "CoreTests"
@@ -72,10 +52,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B5FA2977235E8D9500FDAC7B"
-               BuildableName = "PostFeatureAppUITests.xctest"
-               BlueprintName = "PostFeatureAppUITests"
-               ReferencedContainer = "container:../PostFeature/PostFeatureApp.xcodeproj">
+               BlueprintIdentifier = "B50358BC23566CF600A7C51A"
+               BuildableName = "AdapterTests.xctest"
+               BlueprintName = "AdapterTests"
+               ReferencedContainer = "container:../Adapter/Adapter.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -86,6 +66,26 @@
                BuildableName = "PostFeatureTests.xctest"
                BlueprintName = "PostFeatureTests"
                ReferencedContainer = "container:../PostFeature/PostFeatureApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B5FA2977235E8D9500FDAC7B"
+               BuildableName = "PostFeatureAppUITests.xctest"
+               BlueprintName = "PostFeatureAppUITests"
+               ReferencedContainer = "container:../PostFeature/PostFeatureApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B503588723565E8D00A7C51A"
+               BuildableName = "PostAppsClientUITests.xctest"
+               BlueprintName = "PostAppsClientUITests"
+               ReferencedContainer = "container:PostAppsClient.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
