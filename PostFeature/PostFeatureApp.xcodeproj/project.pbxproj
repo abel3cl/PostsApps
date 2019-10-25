@@ -27,6 +27,9 @@
 		B54DFC2F2362E25A00E66D5F /* PostFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B593D5B723579E9C00B4D87E /* PostFeature.framework */; };
 		B54DFC302362E25A00E66D5F /* PostFeature.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B593D5B723579E9C00B4D87E /* PostFeature.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B54DFC412362E27E00E66D5F /* Swifter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54DFC402362E27E00E66D5F /* Swifter.framework */; platformFilter = ios; };
+		B54DFC422362E3A100E66D5F /* Adapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B54DFC262362E24C00E66D5F /* Adapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B54DFC432362E3A100E66D5F /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B54DFC272362E24C00E66D5F /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B54DFC442362E3ED00E66D5F /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B54DFC282362E24C00E66D5F /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B593D57423579D2000B4D87E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D57323579D2000B4D87E /* AppDelegate.swift */; };
 		B593D57D23579D2100B4D87E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B593D57C23579D2100B4D87E /* Assets.xcassets */; };
 		B593D58023579D2100B4D87E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B593D57E23579D2100B4D87E /* LaunchScreen.storyboard */; };
@@ -106,6 +109,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B54DFC442362E3ED00E66D5F /* Networking.framework in Embed Frameworks */,
+				B54DFC422362E3A100E66D5F /* Adapter.framework in Embed Frameworks */,
+				B54DFC432362E3A100E66D5F /* Core.framework in Embed Frameworks */,
 				B54DFC302362E25A00E66D5F /* PostFeature.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
