@@ -1,0 +1,21 @@
+language: objective-c
+cache: bundler
+osx_image: xcode11
+
+branches:
+  only:
+    - master
+    - develop
+
+git:
+  depth: 3
+
+jobs:
+  include:
+    - stage: LIBRARY_UNIT_TEST
+      env: COMPONENT=LIBRARY
+      script:
+        - set -o pipefail
+        - travis_retry xcodebuild test -workspace PostsApp.xcworkspace -scheme "PostFeatureApp" -destination 'platform=iOS Simulator,name=iPhone X,OS=11.3' -configuration Debug | xcpretty;
+
+
