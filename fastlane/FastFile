@@ -10,7 +10,8 @@ platform :ios do
       mode: "lint",
       output_file: 'SwiftLint/swiftlint.txt',
       config_file: 'SwiftLint/swiftlint.yml',
-      strict: false
+      ignore_exit_status: true,
+      strict: true
     )
   end
 
