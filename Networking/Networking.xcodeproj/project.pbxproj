@@ -274,7 +274,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -z \"$CI\" ]; then\n    ${PROJECT_DIR}/../SwiftLint/swiftlint lint --path ${PROJECT_DIR}/Sources --config ../../SwiftLint/swiftlint.yml --reporter xcode\nfi\n";
+			shellScript = "if [ -z \"$CI\" ]; then\n    ${PROJECT_DIR}/../SwiftLint/swiftlint lint --path ${PROJECT_DIR} --config ../SwiftLint/swiftlint.yml --reporter xcode\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

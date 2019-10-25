@@ -6,7 +6,7 @@ import Networking
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    let url = "https://jsonplaceholder.typicode.com"
+    static let url = "https://jsonplaceholder.typicode.com"
     #if DEBUG
     let adapter = PostAdapterImpl(context: .init(baseUrl: url),
                               client: HTTPClient(executor: HTTPClientDebugExecutor(wrapping: HTTPClientExecutor())))
@@ -15,7 +15,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
                               client: HTTPClient(executor: HTTPClientExecutor()))
     #endif
     var postManager: PostManager?
-    
+
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -27,7 +27,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
         self.window = window
         window.makeKeyAndVisible()
-        
+
         return true
     }
 
@@ -37,4 +37,3 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         postManager?.start()
     }
 }
-

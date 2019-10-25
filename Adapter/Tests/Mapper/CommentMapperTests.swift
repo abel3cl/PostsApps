@@ -3,10 +3,10 @@ import Core
 @testable import Adapter
 
 final class CommentMapperTests: XCTestCase {
-    
+
     func test_valid_json_map_succeeds() {
         do {
-            
+
             let data = JsonUtils.load(file: "comments_valid")
             let response = try JSONDecoder().decode([CommentResponse].self, from: data)
 
@@ -15,7 +15,7 @@ final class CommentMapperTests: XCTestCase {
                 return
             }
             let comment = Comment(withResponse: commentResponse)
-            
+
             XCTAssertEqual(comment.postId, 2)
             XCTAssertEqual(comment.id, 6)
             XCTAssertEqual(comment.name, "et fugit eligendi deleniti quidem qui sint nihil autem")

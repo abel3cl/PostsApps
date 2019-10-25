@@ -178,6 +178,7 @@
 				B503588423565E8D00A7C51A /* Sources */,
 				B503588523565E8D00A7C51A /* Frameworks */,
 				B503588623565E8D00A7C51A /* Resources */,
+				B56ED2F7236282B0001AFCAC /* SwifLint */,
 			);
 			buildRules = (
 			);
@@ -245,6 +246,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B56ED2F7236282B0001AFCAC /* SwifLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwifLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -z \"$CI\" ]; then\n    ${PROJECT_DIR}/../SwiftLint/swiftlint lint --path ${PROJECT_DIR} --config ../SwiftLint/swiftlint.yml --reporter xcode\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B503586023565E8A00A7C51A /* Sources */ = {

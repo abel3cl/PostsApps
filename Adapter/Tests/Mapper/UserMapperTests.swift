@@ -3,14 +3,14 @@ import Core
 @testable import Adapter
 
 final class UserMapperTests: XCTestCase {
-    
+
     func test_valid_json_map_succeeds() {
         do {
             let data = JsonUtils.load(file: "user_valid")
             let response = try JSONDecoder().decode(UserResponse.self, from: data)
 
             let user = User(withResponse: response)
-            
+
             XCTAssertEqual(user.id, 1)
             XCTAssertEqual(user.name, "Leanne Graham")
             XCTAssertEqual(user.username, "Bret")
@@ -27,10 +27,8 @@ final class UserMapperTests: XCTestCase {
             XCTAssertEqual(user.company.catchPhrase, "Multi-layered client-server neural-net")
             XCTAssertEqual(user.company.businessServices, "harness real-time e-markets")
 
-            
         } catch {
             XCTFail(error.localizedDescription)
         }
     }
 }
-

@@ -648,7 +648,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -z \"$CI\" ]; then\n    ${PROJECT_DIR}/../SwiftLint/swiftlint lint --path ${PROJECT_DIR}/PostFeature --config ../../SwiftLint/swiftlint.yml --reporter xcode\nfi\n\n";
+			shellScript = "if [ -z \"$CI\" ]; then\n    ${PROJECT_DIR}/../SwiftLint/swiftlint lint --path ${PROJECT_DIR} --config ../SwiftLint/swiftlint.yml --reporter xcode\nfi\n\n";
 		};
 		B5FA299D235F777C00FDAC7B /* Sign Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

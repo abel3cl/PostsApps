@@ -4,7 +4,7 @@ import XCTest
 final class PersistenceTests: XCTestCase {
 
     private var storage: AnyStorage<User>!
-    
+
     override func setUp() {
         storage = AnyStorage(MemoryStorage<User>(), dispatcher: SyncDispatcher())
     }

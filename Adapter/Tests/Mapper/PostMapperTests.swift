@@ -3,7 +3,7 @@ import Core
 @testable import Adapter
 
 final class PostMapperTests: XCTestCase {
-    
+
     func test_valid_json_map_succeeds() {
         do {
             let data = JsonUtils.load(file: "posts_valid")

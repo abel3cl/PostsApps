@@ -3,7 +3,7 @@
 
 struct SyncDispatcher: Dispatcher {
     func dispatch<T>(work: @escaping (_ completion:  @escaping (T) -> Void) -> Void, completion: @escaping (T) -> Void) {
-        work(completion)        
+        work(completion)
     }
 }
 

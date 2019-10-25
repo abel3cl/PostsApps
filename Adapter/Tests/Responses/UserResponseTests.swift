@@ -33,4 +33,3 @@ final class UserResponseTests: XCTestCase {
         XCTAssertThrowsError(try JSONDecoder().decode(UserResponse.self, from: data))
     }
 }
-
