@@ -38,6 +38,56 @@
                ReferencedContainer = "container:PostAppsClient.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B50358BC23566CF600A7C51A"
+               BuildableName = "AdapterTests.xctest"
+               BlueprintName = "AdapterTests"
+               ReferencedContainer = "container:../Adapter/Adapter.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B50358212353493700A7C51A"
+               BuildableName = "CoreTests.xctest"
+               BlueprintName = "CoreTests"
+               ReferencedContainer = "container:../Core/Core.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B50357FD2353491900A7C51A"
+               BuildableName = "NetworkingTests.xctest"
+               BlueprintName = "NetworkingTests"
+               ReferencedContainer = "container:../Networking/Networking.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B5FA2977235E8D9500FDAC7B"
+               BuildableName = "PostFeatureAppUITests.xctest"
+               BlueprintName = "PostFeatureAppUITests"
+               ReferencedContainer = "container:../PostFeature/PostFeatureApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B593D5BE23579E9C00B4D87E"
+               BuildableName = "PostFeatureTests.xctest"
+               BlueprintName = "PostFeatureTests"
+               ReferencedContainer = "container:../PostFeature/PostFeatureApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
