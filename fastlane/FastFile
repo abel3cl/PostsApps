@@ -20,7 +20,7 @@ platform :ios do
     scan(
       skip_build: false,
       workspace: "PostsApp.xcworkspace",
-      scheme: "PostFeatureApp",
+      scheme: "PostAppsClient-Debug",
       device: "#{testDevice}",
       clean: false
     )

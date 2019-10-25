@@ -21,16 +21,6 @@
 		B5FA29CE235FBF3400FDAC7B /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B503589F23565EC300A7C51A /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B503588923565E8D00A7C51A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B503585C23565E8A00A7C51A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B503586323565E8A00A7C51A;
-			remoteInfo = PostAppsClient;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		B503589E23565EBF00A7C51A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -54,7 +44,6 @@
 		B503587323565E8D00A7C51A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B503587623565E8D00A7C51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B503587823565E8D00A7C51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B503588823565E8D00A7C51A /* PostAppsClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostAppsClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B503588E23565E8D00A7C51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B503589B23565EBF00A7C51A /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B503589F23565EC300A7C51A /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,13 +66,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B503588523565E8D00A7C51A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -101,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				B503586423565E8A00A7C51A /* PostAppsClient.app */,
-				B503588823565E8D00A7C51A /* PostAppsClientUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,25 +149,6 @@
 			productReference = B503586423565E8A00A7C51A /* PostAppsClient.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B503588723565E8D00A7C51A /* PostAppsClientUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B503589723565E8D00A7C51A /* Build configuration list for PBXNativeTarget "PostAppsClientUITests" */;
-			buildPhases = (
-				B503588423565E8D00A7C51A /* Sources */,
-				B503588523565E8D00A7C51A /* Frameworks */,
-				B503588623565E8D00A7C51A /* Resources */,
-				B56ED2F7236282B0001AFCAC /* SwifLint */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B503588A23565E8D00A7C51A /* PBXTargetDependency */,
-			);
-			name = PostAppsClientUITests;
-			productName = PostAppsClientUITests;
-			productReference = B503588823565E8D00A7C51A /* PostAppsClientUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -199,10 +161,6 @@
 				TargetAttributes = {
 					B503586323565E8A00A7C51A = {
 						CreatedOnToolsVersion = 11.0;
-					};
-					B503588723565E8D00A7C51A = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = B503586323565E8A00A7C51A;
 					};
 				};
 			};
@@ -220,7 +178,6 @@
 			projectRoot = "";
 			targets = (
 				B503586323565E8A00A7C51A /* PostAppsClient */,
-				B503588723565E8D00A7C51A /* PostAppsClientUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,35 +192,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B503588623565E8D00A7C51A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B56ED2F7236282B0001AFCAC /* SwifLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwifLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ -z \"$CI\" ]; then\n    ${PROJECT_DIR}/../SwiftLint/swiftlint lint --path ${PROJECT_DIR} --config ../SwiftLint/swiftlint.yml --reporter xcode\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B503586023565E8A00A7C51A /* Sources */ = {
@@ -275,22 +204,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B503588423565E8D00A7C51A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B503588A23565E8D00A7C51A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B503586323565E8A00A7C51A /* PostAppsClient */;
-			targetProxy = B503588923565E8D00A7C51A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B503587523565E8D00A7C51A /* LaunchScreen.storyboard */ = {
@@ -456,46 +370,6 @@
 			};
 			name = Release;
 		};
-		B503589823565E8D00A7C51A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MS48YPHB8N;
-				INFOPLIST_FILE = PostAppsClientUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.abel.PostAppsClientUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PostAppsClient;
-			};
-			name = Debug;
-		};
-		B503589923565E8D00A7C51A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MS48YPHB8N;
-				INFOPLIST_FILE = PostAppsClientUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.abel.PostAppsClientUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PostAppsClient;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -513,15 +387,6 @@
 			buildConfigurations = (
 				B503589223565E8D00A7C51A /* Debug */,
 				B503589323565E8D00A7C51A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B503589723565E8D00A7C51A /* Build configuration list for PBXNativeTarget "PostAppsClientUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B503589823565E8D00A7C51A /* Debug */,
-				B503589923565E8D00A7C51A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
