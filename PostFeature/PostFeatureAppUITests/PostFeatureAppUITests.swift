@@ -34,7 +34,7 @@ final class PostFeatureAppUITests: PostFeatureAppUIBaseTests {
         XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.authorValue].exists)
         XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.emailLabel].exists)
         XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.emailValue].exists)
-        XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.numberOfComments].exists)
+        XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.numberOfComments].waitForExistence(timeout: 2))
         XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.body].exists)
     }
 
@@ -55,7 +55,8 @@ final class PostFeatureAppUITests: PostFeatureAppUIBaseTests {
         XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.authorValue].exists)
         XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.emailLabel].exists)
         XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.emailValue].exists)
-        XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.numberOfComments].exists)
+
+        XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.numberOfComments].waitForExistence(timeout: 2))
         XCTAssertTrue(app.staticTexts[AccessibilityIds.Details.body].exists)
 
         XCTAssertFalse(app.alerts.firstMatch.exists)
