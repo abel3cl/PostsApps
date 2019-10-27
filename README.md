@@ -14,8 +14,6 @@ When downloading:
 | Master | [![Build Status](https://travis-ci.org/abel3cl/PostsApps.svg?branch=master)](https://travis-ci.org/abel3cl/PostsApps) |
 | Develop | [![Build Status](https://travis-ci.org/abel3cl/PostsApps.svg?branch=develop)](https://travis-ci.org/abel3cl/PostsApps) |
 
-(Seems to be a problem in TravisCI when building one of the projects. However a local build works just fine.)
-
 # Targets
 
 PostAppsClient - Debug: Main App running in Debug config (Allows insecure HTTP connections)
