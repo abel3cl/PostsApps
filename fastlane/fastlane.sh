@@ -10,4 +10,4 @@ echo "Pull Request?: ${TRAVIS_PULL_REQUEST}"
 echo "Travis Event Type: ${TRAVIS_EVENT_TYPE}"
 echo "Travis commit message: ${TRAVIS_COMMIT_MESSAGE}"
 
-bundle exec fastlane ios feature
+bundle exec fastlane ios test

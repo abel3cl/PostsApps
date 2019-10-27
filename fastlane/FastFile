@@ -15,12 +15,23 @@ platform :ios do
     )
   end
 
-  lane :feature do  
+  lane :test do  
     lint
     scan(
       skip_build: false,
       workspace: "PostsApp.xcworkspace",
       scheme: "PostAppsClient-Debug",
+      device: "#{testDevice}",
+      clean: false
+    )
+  end
+
+  lane :feature do  
+    lint
+    scan(
+      skip_build: false,
+      workspace: "PostsApp.xcworkspace",
+      scheme: "PostFeatureApp",
       device: "#{testDevice}",
       clean: false
     )
