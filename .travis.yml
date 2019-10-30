@@ -19,6 +19,9 @@ script:
 
 matrix:
   include:
-    - env: CI_DEVICE='iPhone 7 (13.0)'
+    - env: CI_DEVICE='platform=iOS Simulator,name=iPhone 7,OS=13.0'
     - env: CI_DEVICE='iPhone 8 (13.0)'
-    - env: CI_DEVICE='iPhone X (13.0)'
+    - env: CI_DEVICE='platform=iOS Simulator,name=iPhone X,OS=13.0'
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
