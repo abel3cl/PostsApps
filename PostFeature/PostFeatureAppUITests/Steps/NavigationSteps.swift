@@ -33,7 +33,7 @@ extension PostFeatureAppUIBaseTests {
 
     func whenITapOnFirstCell() {
         let cell = app.tables.cells.element(boundBy: 0)
-        XCTAssertTrue(cell.waitForExistence(timeout: 2))
+        XCTAssertTrue(cell.waitForExistence(timeout: 10))
         cell.tap()
     }
 

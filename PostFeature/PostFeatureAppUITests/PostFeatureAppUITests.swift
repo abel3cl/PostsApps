@@ -18,7 +18,7 @@ final class PostFeatureAppUITests: PostFeatureAppUIBaseTests {
 
         let cell = app.tables.cells.element(boundBy: 0)
 
-        XCTAssertTrue(cell.waitForExistence(timeout: 2))
+        XCTAssertTrue(cell.waitForExistence(timeout: 10))
 
         XCTAssertTrue(cell.staticTexts[AccessibilityIds.Post.title].exists)
         XCTAssertTrue(cell.staticTexts[AccessibilityIds.Post.subtitle].exists)

@@ -8,6 +8,8 @@ When downloading:
  ```
 
  ## Build Status
+ 
+ [![codecov](https://codecov.io/gh/abel3cl/PostsApps/branch/develop/graph/badge.svg)](https://codecov.io/gh/abel3cl/PostsApps)
 
 | Branch | Status |
 | ------------- | ------------- |
