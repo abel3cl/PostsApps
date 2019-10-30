@@ -8,13 +8,13 @@ When downloading:
  ```
 
  ## Build Status
- 
- [![codecov](https://codecov.io/gh/abel3cl/PostsApps/branch/develop/graph/badge.svg)](https://codecov.io/gh/abel3cl/PostsApps)
 
-| Branch | Status |
-| ------------- | ------------- |
+[![codecov](https://codecov.io/gh/abel3cl/PostsApps/branch/develop/graph/badge.svg)](https://codecov.io/gh/abel3cl/PostsApps)
+
+| Branch | Status | ---------------- |
+| ------------- | ---------------- | |
 | Master | [![Build Status](https://travis-ci.org/abel3cl/PostsApps.svg?branch=master)](https://travis-ci.org/abel3cl/PostsApps) |
-| Develop | [![Build Status](https://travis-ci.org/abel3cl/PostsApps.svg?branch=develop)](https://travis-ci.org/abel3cl/PostsApps) |
+| Develop | [![Build Status](https://travis-ci.org/abel3cl/PostsApps.svg?branch=develop)](https://travis-ci.org/abel3cl/PostsApps) | [![Build Status](https://app.bitrise.io/app/9198ab2bb81efa71/status.svg?token=DAGHGK9NczZBTuKD4yFc4g&branch=develop)](https://app.bitrise.io/app/9198ab2bb81efa71) |
 
 # Targets
 
